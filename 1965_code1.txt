@@ -1,0 +1,223 @@
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 25,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+]
+
+campaignTrail_temp.election_json = [
+    {
+        "model": "campaign_trail.election",
+        "pk": 20,
+        "fields": {
+            "year": 2016,
+            "display_year": "1985",
+            "summary": "<p>Brazilian democracy has a death date. <b>April 1st, 1964.</b> When the army came marching from Minas, Goulart had to flee to Rio Grande do Sulin order to avoid civil war.\nThe Declaration of Vacancy ruined the state of the nation once and for all. <i>\"Bastards! Bastards!\"</i> - screamed Tancredo, shocked that the man he had worked with as prime minister was being removed. Now Brazil finds itself divided between those who want immediate reform <b> and those who don't</b></p>\n\n\n<ul>\n<li> As Tancredo, try to restore the fire of Democracy seen in the Diretas Já movement, but be careful <b>as unexpected things may occur</b></li>\n\n<li> As Maluf, try maintaining the power given to the PDS by the Revolution. You may not be popular amongst the people, <b>but you can always have help from the army.</b></li>\n</ul>",
+            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602745273356298/advisor.png?ex=6634f83a&is=6633a6ba&hm=621e95d77d43744a0660f4444193cbc01713ad1610b3504df45331aefa2bd700&",
+            "winning_electoral_vote_number": 270,
+            "advisor_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235603072756092978/advisor.png?ex=6634f888&is=6633a708&hm=fa6f9cebb340cd442dd28689d37168651ec93daf3ded6cb5b10ddaefb88fe36f&",
+            "recommended_reading": "<ul>\n<li><a href=https://www.chicagotribune.com/opinion/editorials/ct-edit-chicago-tribune-biden-endorsement-20200925-lnyxsb5qvrftnjjmj3rnzj33jy-story.html>Our Case For Joe Biden</a></li>\n<li><a href=https://nationalinterest.org/feature/case-trump-166808>The Case For Trump</a></li>\n<li><a href=https://www.npr.org/2020/11/18/935730100/how-biden-won-ramping-up-the-base-and-expanding-margins-in-the-suburbs>How Biden Won: Ramping Up The Base And Expanding Margins In The Suburbs</a></li>\n<li><a href=https://www.prospectmagazine.co.uk/politics/donald-trump-joe-biden-us-election-almost-win-votes-concede>Why Did Trump Almost Win?</a></li>\n<li><a href=https://www.hoover.org/research/no-evidence-voter-fraud-guide-statistical-claims-about-2020-election>No Evidence For Voter Fraud: A Guide To Statistical Claims About The 2020 Election</a></li>\n</ul>",
+            "has_visits": 1,
+            "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
+        }
+    }
+]
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 20,
+        "year": 2016,
+        "is_premium": 0,
+        "display_year": "1985"
+    }
+]
+
+campaignTrail_temp.credits = "Emmy"
+
+campaignTrail_temp.candidate_json = [
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1001,
+        "fields": {
+            "first_name": "Tancredo",
+            "last_name": "Neves",
+            "election": 20,
+            "party": "PMDB",
+            "state": "Minas Gerais",
+            "priority": 1,
+            "description": "Tancredo Neves has been one of the most vocal opponents of the dictatorship ever since its inception in 1964, but somehow, never had his mandate revoked by the government. <br><br>Now, he finds himself at odds with the government's candidate. Wondering if he will make history, or leave a country at the mercy of their oppressors",
+            "color_hex": "#008000",
+            "secondary_color_hex": null,
+            "is_active": 1,
+            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602746258755694/tancredo.png?ex=6634f83b&is=6633a6bb&hm=f5c2e64b10fa3d7912b2b700a4e73c8c5d1c8ee29ece5f6cf5bbe6e8c9930b00&",
+            "electoral_victory_message": "\"Tancredo Neves, ",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 1002,
+        "fields": {
+            "first_name": "José",
+            "last_name": "Sarney",
+            "election": 20,
+            "party": "PMDB",
+            "state": "Maranhão",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#008000",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602746011553895/sarney.png?ex=6634f83b&is=6633a6bb&hm=c0df6f8fa40d30b8aca1659d2e9769bccc8d8479a41c271b1fa3d47bf1774863&",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "It's odd for Sarney to run with Tancredo. He was after all, the president of the PDS until some weeks ago. But something wasn't right, not for Sarney, the ascension of Maluf was too much for him to bear. <br><br>He resigned from the PDS without too many problems, but his legacy as the president of the party of the Government will follow him.",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50000,
+        "fields": {
+            "first_name": "Paulo",
+            "last_name": "Maluf",
+            "election": 20,
+            "party": "PDS",
+            "state": "São Paulo",
+            "priority": 1,
+            "description": "What is there to say about Maluf? One of the most ardent supporters of the dictatorship and extremely vocal about his opposition to direct elections. Having been one of the few that spoke against the Dante de Oliveira amendment succeeding.<br><br>His victory in the party's primaries was enough for many members of the PDS to desert to Tancredo's camp. With little to no support from his peers, Maluf is sure to fight an uphill battle.",
+            "color_hex": "#000080",
+            "secondary_color_hex": null,
+            "is_active": 1,
+            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602745545723904/maluf.png?ex=6634f83a&is=6633a6ba&hm=9202e0bab218e613e7f43d66aa9f7f6e31e3ea4934ddf6be3f519b4b44dbf342&",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50001,
+        "fields": {
+            "first_name": "Flávio",
+            "last_name": "Marcílio",
+            "election": 20,
+            "party": "PDS",
+            "state": "Piauí",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#000080",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602745780600893/marcilo.png?ex=6634f83a&is=6633a6ba&hm=9a9321aed64b6ff0d62e5b7b18068f246d8c5d66cf3b554823aa146c1cd5fc8d&",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "The former governor of Ceará has appeared as the running mate for Maluf. His choice is to be expected, after all, he is one of the few that still support Maluf and the party after all this time.",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    }
+]
+
+campaignTrail_temp.running_mate_json = [
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 109261,
+        "fields": {
+            "candidate": 1001,
+            "running_mate": 1002
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 150043,
+        "fields": {
+            "candidate": 50000,
+            "running_mate": 50001
+        }
+    }
+]
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 20,
+        "candidates": [
+            1001,
+            50000
+        ]
+    }
+]
+
+campaignTrail_temp.opponents_weighted_json = [
+    {
+        "election": 20,
+        "candidates": [
+            1001,
+            50000
+        ]
+    }
+]
+
+jet_data = {
+    "headerColor": "#700016",
+    "windowColor": "#008000",
+    "containerColor": "#FFFFFF",
+    "innerWindowColor": "#80ff80",
+    "bannerImageUrl": "https://cdn.discordapp.com/attachments/1235598222110625842/1235606057229881344/banner.png?ex=6634fb50&is=6633a9d0&hm=3749f3dbfb1652a4d56b2d8edfe7e03abc6b5a6a40111814b85b7f7288de0742&",
+    "backgroundImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Diretas_J%C3%A1%21_%284996343919%29.jpg",
+    "endingTextColor": "#000000",
+    "customQuote": "\"I did not deserve this\" - Tancredo Neves",
+    "gameTitle": "A TRILHA DE CAMPANHA"
+}
+
+//#startcode
+
+
+corrr = '\n              <h2>A TRILHA DE CAMPANHA</h2><font id="wittyquote" size="4" color="white"><em>"I did not deserve this" - Tancredo Neves</em></font>\n            ';
+
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#700016";
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#008000";
+
+document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+
+$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+
+$(".container")[0].style.backgroundColor = "#FFFFFF";
+
+document.getElementById("header").src = "https://cdn.discordapp.com/attachments/1235598222110625842/1235606057229881344/banner.png?ex=6634fb50&is=6633a9d0&hm=3749f3dbfb1652a4d56b2d8edfe7e03abc6b5a6a40111814b85b7f7288de0742&";
+
+document.body.background = "https://upload.wikimedia.org/wikipedia/commons/c/c9/Diretas_J%C3%A1%21_%284996343919%29.jpg";
+
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#80ff80!important;}</style>";
+
+//#endcode
