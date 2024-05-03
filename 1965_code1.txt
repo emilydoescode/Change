@@ -28,12 +28,12 @@ campaignTrail_temp.election_json = [
         "model": "campaign_trail.election",
         "pk": 20,
         "fields": {
-            "year": 2016,
+            "year": 1985,
             "display_year": "1985",
             "summary": "<p>When they came marching from Minas, the nation would never be the same again. When they declared the presidency vacant and installed their leader, we knew that Brazil had gone too far. Now after years of fighting, we find ourselves ready to return to a state of normalcy, a democratic front, bigger than any other beforehand, has been formed. And they called for one man: Tancredo Neves.</p>\n\n\n<p>Now we fight the long fight for democracy. The restoration of direct elections by the Dante de Oliveira amendment was the greatest achievement for the opposition in years. Now, we find ourselves ready to finish the job. <b>But there's always someone looking from behind the screens.</b></p>",
-            "image_url": "https://cdn.discordapp.com/attachments/1235721624721035325/1235967660202922096/image.psd36.png?ex=66364c15&is=6634fa95&hm=3ea63bb1c349fb2bcd21cfd94342964d989c01f505fb01a6112b14f023459d01&",
-            "winning_electoral_vote_number": 270,
-            "advisor_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235603072756092978/advisor.png?ex=6634f888&is=6633a708&hm=fa6f9cebb340cd442dd28689d37168651ec93daf3ded6cb5b10ddaefb88fe36f&",
+            "image_url": "https://i.imgur.com/DHfGsJf.png",
+            "winning_electoral_vote_number": 0,
+            "advisor_url": "https://i.imgur.com/qTDINaP.png",
             "recommended_reading": "<ul>\n<li><a href=https://www.chicagotribune.com/opinion/editorials/ct-edit-chicago-tribune-biden-endorsement-20200925-lnyxsb5qvrftnjjmj3rnzj33jy-story.html>Our Case For Joe Biden</a></li>\n<li><a href=https://nationalinterest.org/feature/case-trump-166808>The Case For Trump</a></li>\n<li><a href=https://www.npr.org/2020/11/18/935730100/how-biden-won-ramping-up-the-base-and-expanding-margins-in-the-suburbs>How Biden Won: Ramping Up The Base And Expanding Margins In The Suburbs</a></li>\n<li><a href=https://www.prospectmagazine.co.uk/politics/donald-trump-joe-biden-us-election-almost-win-votes-concede>Why Did Trump Almost Win?</a></li>\n<li><a href=https://www.hoover.org/research/no-evidence-voter-fraud-guide-statistical-claims-about-2020-election>No Evidence For Voter Fraud: A Guide To Statistical Claims About The 2020 Election</a></li>\n</ul>",
             "has_visits": 1,
             "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
@@ -44,7 +44,7 @@ campaignTrail_temp.election_json = [
 campaignTrail_temp.temp_election_list = [
     {
         "id": 20,
-        "year": 2016,
+        "year": 1985,
         "is_premium": 0,
         "display_year": "1985"
     }
@@ -55,7 +55,7 @@ campaignTrail_temp.credits = "emmy, Mestrecker, CatBoxXD and dayDoveRomantic"
 campaignTrail_temp.candidate_json = [
     {
         "model": "campaign_trail.candidate",
-        "pk": 1001,
+        "pk": 200,
         "fields": {
             "first_name": "Tancredo",
             "last_name": "Neves",
@@ -63,11 +63,11 @@ campaignTrail_temp.candidate_json = [
             "party": "PMDB",
             "state": "Minas Gerais",
             "priority": 1,
-            "description": "Tancredo is perhaps the only person capable of winning this election from the opposition. He always was a conciliator. From the great state of Minas Gerais, he knows the problems that could come from this campaign. <b>And that maybe he won't make out alive.</b>\n<br><br>\nThese thoughts dominate his mind, he knows that the future of the nation is in his hands. When they came marching down, he was the first one to declare opposition. When the government was declared vacant, he screamed at the face of the Chamber's president <i>\"Bastards! Bastards!\"</i>. His popularity is comparable to that of Vargas, but his opponents also are. The government, the army and the extremists all hate him. <br><br>\n<b><i> So go on Tancredo, and change this nation</b></i>",
+            "description": "<p>Tancredo is perhaps the only person capable of winning this election from the opposition. He always was a conciliator. From the great state of Minas Gerais, he knows the problems that could come from this campaign. <b>And that maybe he won't make out alive.</b></p>\n\n<p>These thoughts dominate his mind, he knows that the future of the nation is in his hands. When they came marching down, he was the first one to declare opposition. When the government was declared vacant, he screamed at the face of the Chamber's president <i>\"Bastards! Bastards!\"</i>. His popularity is comparable to that of Vargas, but his opponents also are. The government, the army and the extremists all hate him.</p>\n\n<p><b><i> So go on Tancredo, and change this nation</b></i></p>",
             "color_hex": "#008000",
             "secondary_color_hex": null,
             "is_active": 1,
-            "image_url": "https://cdn.discordapp.com/attachments/1235721624721035325/1235943018574516234/tancredo.png?ex=66363522&is=6634e3a2&hm=e1491038eec21144cec6881debced4dafbe4465335ec203955e11e6b77b22c2b&",
+            "image_url": "https://i.imgur.com/Bu4DUNO.png",
             "electoral_victory_message": "\"Tancredo Neves, ",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
@@ -78,7 +78,7 @@ campaignTrail_temp.candidate_json = [
     },
     {
         "model": "campaign_trail.candidate",
-        "pk": 1002,
+        "pk": 204,
         "fields": {
             "first_name": "José",
             "last_name": "Sarney",
@@ -90,18 +90,18 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#008000",
             "secondary_color_hex": null,
             "is_active": 0,
-            "image_url": "https://cdn.discordapp.com/attachments/1235721624721035325/1235943018109079552/sarney.png?ex=66363522&is=6634e3a2&hm=5b7fa974c3c8621fbf7cfb341b5ea691f6f6dfd8c091144a044e4db6007e8f1d&",
+            "image_url": "https://i.imgur.com/ecsGEIu.png",
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
-            "description_as_running_mate": "The former president of the PDS is not a man without his flaws. Sarney, a lettered man from Maranhão, has become disillusioned by the government actions, but especially because of Maluf winning the candidacy. He knows that if Maluf wins, the nation would find itself at the cusp of civil war. <br><br> When he allied himself to Tancredo, he thought this move would change his life. His presence would be commanding and the fact the president of the Government's party defected to Tancredo's side would make that many others follow suit. <br><br> <b><i>It is in your hands. O King of Maranhão, to ensure this man wins the election.</b></i>",
+            "description_as_running_mate": "<p>The former president of the PDS is not a man without his flaws. Sarney, a lettered man from Maranhão, has become disillusioned by the government actions, but especially because of Maluf winning the candidacy. He knows that if Maluf wins, the nation would find itself at the cusp of civil war.</p>\n\n<p>When he allied himself to Tancredo, he thought this move would change his life. His presence would be commanding and the fact the president of the Government's party defected to Tancredo's side would make that many others follow suit.</p>\n\n<p><b><i>It is in your hands. O King of Maranhão, to ensure this man wins the election.</b></i></p>",
             "candidate_score": 1,
             "running_mate": true
         }
     },
     {
         "model": "campaign_trail.candidate",
-        "pk": 50000,
+        "pk": 201,
         "fields": {
             "first_name": "Paulo",
             "last_name": "Maluf",
@@ -113,7 +113,7 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#000080",
             "secondary_color_hex": null,
             "is_active": 0,
-            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602745545723904/maluf.png?ex=6634f83a&is=6633a6ba&hm=9202e0bab218e613e7f43d66aa9f7f6e31e3ea4934ddf6be3f519b4b44dbf342&",
+            "image_url": "https://i.imgur.com/smwOOg2.png",
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
@@ -124,7 +124,7 @@ campaignTrail_temp.candidate_json = [
     },
     {
         "model": "campaign_trail.candidate",
-        "pk": 50001,
+        "pk": 209,
         "fields": {
             "first_name": "Flávio",
             "last_name": "Marcílio",
@@ -136,7 +136,7 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#000080",
             "secondary_color_hex": null,
             "is_active": 0,
-            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602745780600893/marcilo.png?ex=6634f83a&is=6633a6ba&hm=9a9321aed64b6ff0d62e5b7b18068f246d8c5d66cf3b554823aa146c1cd5fc8d&",
+            "image_url": "https://i.imgur.com/b6WLIbP.png",
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
@@ -152,16 +152,16 @@ campaignTrail_temp.running_mate_json = [
         "model": "campaign_trail.running_mate",
         "pk": 109261,
         "fields": {
-            "candidate": 1001,
-            "running_mate": 1002
+            "candidate": 200,
+            "running_mate": 204
         }
     },
     {
         "model": "campaign_trail.running_mate",
         "pk": 150043,
         "fields": {
-            "candidate": 50000,
-            "running_mate": 50001
+            "candidate": 201,
+            "running_mate": 209
         }
     }
 ]
@@ -170,8 +170,8 @@ campaignTrail_temp.opponents_default_json = [
     {
         "election": 20,
         "candidates": [
-            1001,
-            50000
+            200,
+            201
         ]
     }
 ]
@@ -180,8 +180,8 @@ campaignTrail_temp.opponents_weighted_json = [
     {
         "election": 20,
         "candidates": [
-            1001,
-            50000
+            200,
+            201
         ]
     }
 ]
@@ -191,7 +191,7 @@ jet_data = {
     "windowColor": "#008000",
     "containerColor": "#008000",
     "innerWindowColor": "#80ff80",
-    "bannerImageUrl": "https://cdn.discordapp.com/attachments/1235598222110625842/1235606057229881344/banner.png?ex=6634fb50&is=6633a9d0&hm=3749f3dbfb1652a4d56b2d8edfe7e03abc6b5a6a40111814b85b7f7288de0742&",
+    "bannerImageUrl": "https://i.imgur.com/R7BRvpP.png",
     "backgroundImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Diretas_J%C3%A1%21_%284996343919%29.jpg",
     "endingTextColor": "#000000",
     "customQuote": "\"I did not deserve this\" - Tancredo Neves",
@@ -214,7 +214,7 @@ $("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selected
 
 $(".container")[0].style.backgroundColor = "#008000";
 
-document.getElementById("header").src = "https://cdn.discordapp.com/attachments/1235598222110625842/1235606057229881344/banner.png?ex=6634fb50&is=6633a9d0&hm=3749f3dbfb1652a4d56b2d8edfe7e03abc6b5a6a40111814b85b7f7288de0742&";
+document.getElementById("header").src = "https://i.imgur.com/R7BRvpP.png";
 
 document.body.background = "https://upload.wikimedia.org/wikipedia/commons/c/c9/Diretas_J%C3%A1%21_%284996343919%29.jpg";
 
