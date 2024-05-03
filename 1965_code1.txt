@@ -44,13 +44,13 @@ campaignTrail_temp.election_json = [
 campaignTrail_temp.temp_election_list = [
     {
         "id": 20,
-        "year": 2016,
+        "year": 1985,
         "is_premium": 0,
         "display_year": "1985"
     }
 ]
 
-campaignTrail_temp.credits = "Emmy"
+campaignTrail_temp.credits = "emmy, Mestrecker, CatBoxXD and dayDoveRomantic"
 
 campaignTrail_temp.candidate_json = [
     {
