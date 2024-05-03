@@ -30,8 +30,8 @@ campaignTrail_temp.election_json = [
         "fields": {
             "year": 2016,
             "display_year": "1985",
-            "summary": "<p>Brazilian democracy has a death date. <b>April 1st, 1964.</b> When the army came marching from Minas, Goulart had to flee to Rio Grande do Sulin order to avoid civil war.\nThe Declaration of Vacancy ruined the state of the nation once and for all. <i>\"Bastards! Bastards!\"</i> - screamed Tancredo, shocked that the man he had worked with as prime minister was being removed. Now Brazil finds itself divided between those who want immediate reform <b> and those who don't</b></p>\n\n\n<ul>\n<li> As Tancredo, try to restore the fire of Democracy seen in the Diretas Já movement, but be careful <b>as unexpected things may occur</b></li>\n\n<li> As Maluf, try maintaining the power given to the PDS by the Revolution. You may not be popular amongst the people, <b>but you can always have help from the army.</b></li>\n</ul>",
-            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602745273356298/advisor.png?ex=6634f83a&is=6633a6ba&hm=621e95d77d43744a0660f4444193cbc01713ad1610b3504df45331aefa2bd700&",
+            "summary": "<p>When they came marching from Minas, the nation would never be the same again. When they declared the presidency vacant and installed their leader, we knew that Brazil had gone too far. Now after years of fighting, we find ourselves ready to return to a state of normalcy, a democratic front, bigger than any other beforehand, has been formed. And they called for one man: Tancredo Neves.</p>\n\n\n<p>Now we fight the long fight for democracy. The restoration of direct elections by the Dante de Oliveira amendment was the greatest achievement for the opposition in years. Now, we find ourselves ready to finish the job. <b>But there's always someone looking from behind the screens.</b></p>",
+            "image_url": "https://cdn.discordapp.com/attachments/1235721624721035325/1235967660202922096/image.psd36.png?ex=66364c15&is=6634fa95&hm=3ea63bb1c349fb2bcd21cfd94342964d989c01f505fb01a6112b14f023459d01&",
             "winning_electoral_vote_number": 270,
             "advisor_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235603072756092978/advisor.png?ex=6634f888&is=6633a708&hm=fa6f9cebb340cd442dd28689d37168651ec93daf3ded6cb5b10ddaefb88fe36f&",
             "recommended_reading": "<ul>\n<li><a href=https://www.chicagotribune.com/opinion/editorials/ct-edit-chicago-tribune-biden-endorsement-20200925-lnyxsb5qvrftnjjmj3rnzj33jy-story.html>Our Case For Joe Biden</a></li>\n<li><a href=https://nationalinterest.org/feature/case-trump-166808>The Case For Trump</a></li>\n<li><a href=https://www.npr.org/2020/11/18/935730100/how-biden-won-ramping-up-the-base-and-expanding-margins-in-the-suburbs>How Biden Won: Ramping Up The Base And Expanding Margins In The Suburbs</a></li>\n<li><a href=https://www.prospectmagazine.co.uk/politics/donald-trump-joe-biden-us-election-almost-win-votes-concede>Why Did Trump Almost Win?</a></li>\n<li><a href=https://www.hoover.org/research/no-evidence-voter-fraud-guide-statistical-claims-about-2020-election>No Evidence For Voter Fraud: A Guide To Statistical Claims About The 2020 Election</a></li>\n</ul>",
@@ -44,7 +44,7 @@ campaignTrail_temp.election_json = [
 campaignTrail_temp.temp_election_list = [
     {
         "id": 20,
-        "year": 1985,
+        "year": 2016,
         "is_premium": 0,
         "display_year": "1985"
     }
@@ -63,11 +63,11 @@ campaignTrail_temp.candidate_json = [
             "party": "PMDB",
             "state": "Minas Gerais",
             "priority": 1,
-            "description": "Tancredo Neves has been one of the most vocal opponents of the dictatorship ever since its inception in 1964, but somehow, never had his mandate revoked by the government. <br><br>Now, he finds himself at odds with the government's candidate. Wondering if he will make history, or leave a country at the mercy of their oppressors",
+            "description": "Tancredo is perhaps the only person capable of winning this election from the opposition. He always was a conciliator. From the great state of Minas Gerais, he knows the problems that could come from this campaign. <b>And that maybe he won't make out alive.</b>\n<br><br>\nThese thoughts dominate his mind, he knows that the future of the nation is in his hands. When they came marching down, he was the first one to declare opposition. When the government was declared vacant, he screamed at the face of the Chamber's president <i>\"Bastards! Bastards!\"</i>. His popularity is comparable to that of Vargas, but his opponents also are. The government, the army and the extremists all hate him. <br><br>\n<b><i> So go on Tancredo, and change this nation</b></i>",
             "color_hex": "#008000",
             "secondary_color_hex": null,
             "is_active": 1,
-            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602746258755694/tancredo.png?ex=6634f83b&is=6633a6bb&hm=f5c2e64b10fa3d7912b2b700a4e73c8c5d1c8ee29ece5f6cf5bbe6e8c9930b00&",
+            "image_url": "https://cdn.discordapp.com/attachments/1235721624721035325/1235943018574516234/tancredo.png?ex=66363522&is=6634e3a2&hm=e1491038eec21144cec6881debced4dafbe4465335ec203955e11e6b77b22c2b&",
             "electoral_victory_message": "\"Tancredo Neves, ",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
@@ -83,18 +83,18 @@ campaignTrail_temp.candidate_json = [
             "first_name": "José",
             "last_name": "Sarney",
             "election": 20,
-            "party": "PMDB",
+            "party": "Frente Liberal",
             "state": "Maranhão",
             "priority": 1,
             "description": "<p>Put description here</p>",
             "color_hex": "#008000",
             "secondary_color_hex": null,
             "is_active": 0,
-            "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602746011553895/sarney.png?ex=6634f83b&is=6633a6bb&hm=c0df6f8fa40d30b8aca1659d2e9769bccc8d8479a41c271b1fa3d47bf1774863&",
+            "image_url": "https://cdn.discordapp.com/attachments/1235721624721035325/1235943018109079552/sarney.png?ex=66363522&is=6634e3a2&hm=5b7fa974c3c8621fbf7cfb341b5ea691f6f6dfd8c091144a044e4db6007e8f1d&",
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
-            "description_as_running_mate": "It's odd for Sarney to run with Tancredo. He was after all, the president of the PDS until some weeks ago. But something wasn't right, not for Sarney, the ascension of Maluf was too much for him to bear. <br><br>He resigned from the PDS without too many problems, but his legacy as the president of the party of the Government will follow him.",
+            "description_as_running_mate": "The former president of the PDS is not a man without his flaws. Sarney, a lettered man from Maranhão, has become disillusioned by the government actions, but especially because of Maluf winning the candidacy. He knows that if Maluf wins, the nation would find itself at the cusp of civil war. <br><br> When he allied himself to Tancredo, he thought this move would change his life. His presence would be commanding and the fact the president of the Government's party defected to Tancredo's side would make that many others follow suit. <br><br> <b><i>It is in your hands. O King of Maranhão, to ensure this man wins the election.</b></i>",
             "candidate_score": 1,
             "running_mate": true
         }
@@ -112,7 +112,7 @@ campaignTrail_temp.candidate_json = [
             "description": "What is there to say about Maluf? One of the most ardent supporters of the dictatorship and extremely vocal about his opposition to direct elections. Having been one of the few that spoke against the Dante de Oliveira amendment succeeding.<br><br>His victory in the party's primaries was enough for many members of the PDS to desert to Tancredo's camp. With little to no support from his peers, Maluf is sure to fight an uphill battle.",
             "color_hex": "#000080",
             "secondary_color_hex": null,
-            "is_active": 1,
+            "is_active": 0,
             "image_url": "https://cdn.discordapp.com/attachments/1235598222110625842/1235602745545723904/maluf.png?ex=6634f83a&is=6633a6ba&hm=9202e0bab218e613e7f43d66aa9f7f6e31e3ea4934ddf6be3f519b4b44dbf342&",
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
@@ -189,7 +189,7 @@ campaignTrail_temp.opponents_weighted_json = [
 jet_data = {
     "headerColor": "#700016",
     "windowColor": "#008000",
-    "containerColor": "#FFFFFF",
+    "containerColor": "#008000",
     "innerWindowColor": "#80ff80",
     "bannerImageUrl": "https://cdn.discordapp.com/attachments/1235598222110625842/1235606057229881344/banner.png?ex=6634fb50&is=6633a9d0&hm=3749f3dbfb1652a4d56b2d8edfe7e03abc6b5a6a40111814b85b7f7288de0742&",
     "backgroundImageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Diretas_J%C3%A1%21_%284996343919%29.jpg",
@@ -212,7 +212,7 @@ document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_st
 
 $("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
 
-$(".container")[0].style.backgroundColor = "#FFFFFF";
+$(".container")[0].style.backgroundColor = "#008000";
 
 document.getElementById("header").src = "https://cdn.discordapp.com/attachments/1235598222110625842/1235606057229881344/banner.png?ex=6634fb50&is=6633a9d0&hm=3749f3dbfb1652a4d56b2d8edfe7e03abc6b5a6a40111814b85b7f7288de0742&";
 
