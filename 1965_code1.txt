@@ -50,7 +50,16 @@ campaignTrail_temp.temp_election_list = [
     }
 ]
 
-campaignTrail_temp.credits = "emmy, Mestrecker, CatBoxXD, dayRoveRomantic, Kaynight, The Fresh Prince, & SilverImperator"
+campaignTrail_temp.credits = "<button onclick='credits()'>various people!</button>"
+
+credits = function() {
+    credits = [""]
+  text = "Writing:\nemmy\nMestCrecker\ndayDoveRomantic\nKaynight\nThe Fresh Prince\nSilverImperator\n\nCoding:\nCatBoxXD\n"
+    for (i in credits) {
+        text += credits[i]
+    }
+    alert(text)
+  }
 
 campaignTrail_temp.candidate_json = [
     {
