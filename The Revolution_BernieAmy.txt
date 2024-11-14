@@ -30,6 +30,880 @@ campaignTrail_temp.answers_json = [
     },
 ]
 
+campaignTrail_temp.states_json = [
+    {
+        "model": "campaign_trail.state",
+        "pk": 1100,
+        "fields": {
+            "name": "Alabama",
+            "abbr": "AL",
+            "electoral_votes": 9,
+            "popular_votes": 2323282,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1101,
+        "fields": {
+            "name": "Alaska",
+            "abbr": "AK",
+            "electoral_votes": 3,
+            "popular_votes": 359530,
+            "poll_closing_time": 420,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1102,
+        "fields": {
+            "name": "Arizona",
+            "abbr": "AZ",
+            "electoral_votes": 11,
+            "popular_votes": 3387326,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1103,
+        "fields": {
+            "name": "Arkansas",
+            "abbr": "AR",
+            "electoral_votes": 6,
+            "popular_votes": 1219069,
+            "poll_closing_time": 150,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1104,
+        "fields": {
+            "name": "California",
+            "abbr": "CA",
+            "electoral_votes": 55,
+            "popular_votes": 17500881,
+            "poll_closing_time": 300,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1105,
+        "fields": {
+            "name": "Colorado",
+            "abbr": "CO",
+            "electoral_votes": 9,
+            "popular_votes": 3256980,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1106,
+        "fields": {
+            "name": "Connecticut",
+            "abbr": "CT",
+            "electoral_votes": 7,
+            "popular_votes": 1823857,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1107,
+        "fields": {
+            "name": "Delaware",
+            "abbr": "DE",
+            "electoral_votes": 3,
+            "popular_votes": 504346,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1108,
+        "fields": {
+            "name": "Florida",
+            "abbr": "FL",
+            "electoral_votes": 29,
+            "popular_votes": 11067456,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1109,
+        "fields": {
+            "name": "Georgia",
+            "abbr": "GA",
+            "electoral_votes": 16,
+            "popular_votes": 4999960,
+            "poll_closing_time": 60,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1110,
+        "fields": {
+            "name": "Hawaii",
+            "abbr": "HI",
+            "electoral_votes": 4,
+            "popular_votes": 574469,
+            "poll_closing_time": 360,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1111,
+        "fields": {
+            "name": "Idaho",
+            "abbr": "ID",
+            "electoral_votes": 4,
+            "popular_votes": 868014,
+            "poll_closing_time": 300,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1112,
+        "fields": {
+            "name": "Illinois",
+            "abbr": "IL",
+            "electoral_votes": 20,
+            "popular_votes": 6033744,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1113,
+        "fields": {
+            "name": "Indiana",
+            "abbr": "IN",
+            "electoral_votes": 11,
+            "popular_votes": 3033121,
+            "poll_closing_time": 0,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1114,
+        "fields": {
+            "name": "Iowa",
+            "abbr": "IA",
+            "electoral_votes": 6,
+            "popular_votes": 1690871,
+            "poll_closing_time": 240,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1115,
+        "fields": {
+            "name": "Kansas",
+            "abbr": "KS",
+            "electoral_votes": 6,
+            "popular_votes": 1372303,
+            "poll_closing_time": 240,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1116,
+        "fields": {
+            "name": "Kentucky",
+            "abbr": "KY",
+            "electoral_votes": 8,
+            "popular_votes": 2136768,
+            "poll_closing_time": 0,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1117,
+        "fields": {
+            "name": "Louisiana",
+            "abbr": "LA",
+            "electoral_votes": 8,
+            "popular_votes": 2148062,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1118,
+        "fields": {
+            "name": "Maine",
+            "abbr": "ME",
+            "electoral_votes": 2,
+            "popular_votes": 819461,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1119,
+        "fields": {
+            "name": "Maryland",
+            "abbr": "MD",
+            "electoral_votes": 10,
+            "popular_votes": 3037030,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1120,
+        "fields": {
+            "name": "Massachusetts",
+            "abbr": "MA",
+            "electoral_votes": 11,
+            "popular_votes": 3631402,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1121,
+        "fields": {
+            "name": "Michigan",
+            "abbr": "MI",
+            "electoral_votes": 16,
+            "popular_votes": 5539302,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1122,
+        "fields": {
+            "name": "Minnesota",
+            "abbr": "MN",
+            "electoral_votes": 10,
+            "popular_votes": 3277171,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1123,
+        "fields": {
+            "name": "Mississippi",
+            "abbr": "MS",
+            "electoral_votes": 6,
+            "popular_votes": 1313759,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1124,
+        "fields": {
+            "name": "Missouri",
+            "abbr": "MO",
+            "electoral_votes": 10,
+            "popular_votes": 3025962,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1125,
+        "fields": {
+            "name": "Montana",
+            "abbr": "MT",
+            "electoral_votes": 3,
+            "popular_votes": 603674,
+            "poll_closing_time": 240,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1126,
+        "fields": {
+            "name": "Nebraska",
+            "abbr": "NE",
+            "electoral_votes": 2,
+            "popular_votes": 956383,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1127,
+        "fields": {
+            "name": "Nevada",
+            "abbr": "NV",
+            "electoral_votes": 6,
+            "popular_votes": 1405376,
+            "poll_closing_time": 240,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1128,
+        "fields": {
+            "name": "New Hampshire",
+            "abbr": "NH",
+            "electoral_votes": 4,
+            "popular_votes": 806205,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1129,
+        "fields": {
+            "name": "New Jersey",
+            "abbr": "NJ",
+            "electoral_votes": 14,
+            "popular_votes": 4549353,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1130,
+        "fields": {
+            "name": "New Mexico",
+            "abbr": "NM",
+            "electoral_votes": 5,
+            "popular_votes": 923965,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1131,
+        "fields": {
+            "name": "New York",
+            "abbr": "NY",
+            "electoral_votes": 29,
+            "popular_votes": 8594826,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1132,
+        "fields": {
+            "name": "North Carolina",
+            "abbr": "NC",
+            "electoral_votes": 15,
+            "popular_votes": 5524804,
+            "poll_closing_time": 90,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1133,
+        "fields": {
+            "name": "North Dakota",
+            "abbr": "ND",
+            "electoral_votes": 3,
+            "popular_votes": 361819,
+            "poll_closing_time": 300,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1134,
+        "fields": {
+            "name": "Ohio",
+            "abbr": "OH",
+            "electoral_votes": 18,
+            "popular_votes": 5922202,
+            "poll_closing_time": 90,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1135,
+        "fields": {
+            "name": "Oklahoma",
+            "abbr": "OK",
+            "electoral_votes": 7,
+            "popular_votes": 1560699,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1136,
+        "fields": {
+            "name": "Oregon",
+            "abbr": "OR",
+            "electoral_votes": 7,
+            "popular_votes": 2374321,
+            "poll_closing_time": 300,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1137,
+        "fields": {
+            "name": "Pennsylvania",
+            "abbr": "PA",
+            "electoral_votes": 20,
+            "popular_votes": 6915283,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1138,
+        "fields": {
+            "name": "Rhode Island",
+            "abbr": "RI",
+            "electoral_votes": 4,
+            "popular_votes": 517757,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1139,
+        "fields": {
+            "name": "South Carolina",
+            "abbr": "SC",
+            "electoral_votes": 9,
+            "popular_votes": 2513329,
+            "poll_closing_time": 60,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1140,
+        "fields": {
+            "name": "South Dakota",
+            "abbr": "SD",
+            "electoral_votes": 3,
+            "popular_votes": 422609,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1141,
+        "fields": {
+            "name": "Tennessee",
+            "abbr": "TN",
+            "electoral_votes": 11,
+            "popular_votes": 3053851,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1142,
+        "fields": {
+            "name": "Texas",
+            "abbr": "TX",
+            "electoral_votes": 38,
+            "popular_votes": 11315056,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1143,
+        "fields": {
+            "name": "Utah",
+            "abbr": "UT",
+            "electoral_votes": 6,
+            "popular_votes": 1488289,
+            "poll_closing_time": 240,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1144,
+        "fields": {
+            "name": "Vermont",
+            "abbr": "VT",
+            "electoral_votes": 3,
+            "popular_votes": 367428,
+            "poll_closing_time": 60,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1145,
+        "fields": {
+            "name": "Virginia",
+            "abbr": "VA",
+            "electoral_votes": 13,
+            "popular_votes": 4460524,
+            "poll_closing_time": 60,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1146,
+        "fields": {
+            "name": "Washington",
+            "abbr": "WA",
+            "electoral_votes": 12,
+            "popular_votes": 4087631,
+            "poll_closing_time": 300,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1147,
+        "fields": {
+            "name": "Washington DC",
+            "abbr": "DC",
+            "electoral_votes": 3,
+            "popular_votes": 344356,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1148,
+        "fields": {
+            "name": "West Virginia",
+            "abbr": "WV",
+            "electoral_votes": 5,
+            "popular_votes": 794731,
+            "poll_closing_time": 90,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1149,
+        "fields": {
+            "name": "Wisconsin",
+            "abbr": "WI",
+            "electoral_votes": 10,
+            "popular_votes": 3298041,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1150,
+        "fields": {
+            "name": "Wyoming",
+            "abbr": "WY",
+            "electoral_votes": 3,
+            "popular_votes": 276765,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1151,
+        "fields": {
+            "name": "Maine-1",
+            "abbr": "M1",
+            "electoral_votes": 1,
+            "popular_votes": 999,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1152,
+        "fields": {
+            "name": "Maine-2",
+            "abbr": "M2",
+            "electoral_votes": 1,
+            "popular_votes": 999,
+            "poll_closing_time": 120,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1153,
+        "fields": {
+            "name": "Nebraska-1",
+            "abbr": "N1",
+            "electoral_votes": 1,
+            "popular_votes": 999,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1154,
+        "fields": {
+            "name": "Nebraska-2",
+            "abbr": "N2",
+            "electoral_votes": 1,
+            "popular_votes": 999,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.state",
+        "pk": 1155,
+        "fields": {
+            "name": "Nebraska-3",
+            "abbr": "N3",
+            "electoral_votes": 1,
+            "popular_votes": 999,
+            "poll_closing_time": 180,
+            "winner_take_all_flg": 1,
+            "election": 9
+        }
+    }
+]
+
+campaignTrail_temp.issues_json = [
+    {
+        "model": "campaign_trail.issue",
+        "pk": 110,
+        "fields": {
+            "name": "Social Democracy",
+            "description": 0,
+            "stance_1": "Revolutionaries",
+            "stance_desc_1": 0,
+            "stance_2": "Bernie Bros",
+            "stance_desc_2": 0,
+            "stance_3": "Bernie Bros",
+            "stance_desc_3": 0,
+            "stance_4": "The Middle",
+            "stance_desc_4": 0,
+            "stance_5": "Moderate Reps",
+            "stance_desc_5": 0,
+            "stance_6": "Crazy Idea",
+            "stance_desc_6": 0,
+            "stance_7": "MAGA Nutheads",
+            "stance_desc_7": 0,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 111,
+        "fields": {
+            "name": "Healthcare",
+            "description": 0,
+            "stance_1": "Nationalize Everything",
+            "stance_desc_1": 0,
+            "stance_2": "Single-Payer",
+            "stance_desc_2": 0,
+            "stance_3": "Single-Payer",
+            "stance_desc_3": 0,
+            "stance_4": "Obamacare 2",
+            "stance_desc_4": 0,
+            "stance_5": "Status Quo",
+            "stance_desc_5": 0,
+            "stance_6": "Spend Less",
+            "stance_desc_6": 0,
+            "stance_7": "Communist Bullshit",
+            "stance_desc_7": 0,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 112,
+        "fields": {
+            "name": "Taxes",
+            "description": 0,
+            "stance_1": "Eat the Rich",
+            "stance_desc_1": 0,
+            "stance_2": "Tax the Rich",
+            "stance_desc_2": 0,
+            "stance_3": "Progressives",
+            "stance_desc_3": 0,
+            "stance_4": "Keep It As Is",
+            "stance_desc_4": 0,
+            "stance_5": "Less is Better",
+            "stance_desc_5": 0,
+            "stance_6": "Taxation is Theft",
+            "stance_desc_6": 0,
+            "stance_7": "Bleeding Heart Libertarians",
+            "stance_desc_7": 0,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 113,
+        "fields": {
+            "name": "Foreign Policy",
+            "description": 0,
+            "stance_1": "Dove Till the End",
+            "stance_desc_1": 0,
+            "stance_2": "Don't Nuke Everything",
+            "stance_desc_2": 0,
+            "stance_3": "Dovish",
+            "stance_desc_3": 0,
+            "stance_4": "Don't Care",
+            "stance_desc_4": 0,
+            "stance_5": "Hawkish",
+            "stance_desc_5": 0,
+            "stance_6": "Axis of Evil Expander",
+            "stance_desc_6": 0,
+            "stance_7": "Destroy Our Enemies",
+            "stance_desc_7": 0,
+            "election": 9
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 114,
+        "fields": {
+            "name": "Extremism",
+            "description": 0,
+            "stance_1": "Eliminated",
+            "stance_desc_1": 0,
+            "stance_2": "Waning",
+            "stance_desc_2": 0,
+            "stance_3": "Waning",
+            "stance_desc_3": 0,
+            "stance_4": "Controlled",
+            "stance_desc_4": 0,
+            "stance_5": "Voices of Racism Past",
+            "stance_desc_5": 0,
+            "stance_6": "Confederate Defender",
+            "stance_desc_6": 0,
+            "stance_7": "National Divorce",
+            "stance_desc_7": 0,
+            "election": 9
+        }
+    }
+]
+
+campaignTrail_temp.state_issue_score_json = [
+    {
+        "model": "campaign_trail.state_issue_score",
+        "pk": 3500,
+        "fields": {
+            "state": 1100,
+            "issue": 110,
+            "state_issue_score": -0.55,
+            "weight": 7
+        }
+    },
+
+    {
+        "model": "campaign_trail.state_issue_score",
+        "pk": 3501,
+        "fields": {
+            "state": 1100,
+            "issue": 111,
+            "state_issue_score": -0.55,
+            "weight": 7
+        }
+    },
+]
+
+
 campaignTrail_temp.answer_feedback_json = [
     {
         "model": "campaign_trail.answer_feedback",
@@ -88,3 +962,65 @@ function updateQuestionBanner() {
 function tunnel(new_q){
     return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
 } 
+
+function getTooltips(str) {
+        let matches = [];
+    
+        tooltipList.forEach((tooltip, index) => {
+            // Adjust the regex to match searchString potentially surrounded by “ and followed by optional punctuation
+           let regex = new RegExp(`(?<=\\b|\\s|^|“)${tooltip.searchString}(?=[.,;!?]?\\b|\\s|”|$)`, 'g');
+    
+    
+            let match;
+            while ((match = regex.exec(str)) !== null) {
+                matches.push({
+                    start: match.index + (match[0].startsWith('“') ? 1 : 0), // Adjust for potential starting “
+                    end: match.index + match[0].length - (match[0].endsWith('”') ? 1 : 0) - (match[2] ? 1 : 0), 
+                    tooltipIndex: index
+                });
+            }
+        });
+    
+        // Sort by starting position; if two start at the same position, longer match comes first
+        matches.sort((a, b) => a.start - b.start || b.end - b.start - (a.end - a.start));
+    
+        // Filter out overlaps
+        for (let i = 0; i < matches.length - 1; ) {
+            if (matches[i + 1].start < matches[i].end) {
+                matches.splice(i + 1, 1); // Remove the next match since it overlaps
+            } else {
+                i++; // Move to next match
+            }
+        }
+    
+        return matches;
+    }
+    function applyTooltips(str) {
+        const matches = getTooltips(str);
+        let result = '';
+        let lastIndex = 0;
+    
+        matches.forEach(match => {
+            const tooltip = tooltipList[match.tooltipIndex];
+            result += str.slice(lastIndex, match.start);
+            result += `<span class='mytooltip'>${tooltip.searchString}<span class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
+            lastIndex = match.end;
+        });
+    
+        result += str.slice(lastIndex); // Add the remainder of the original string
+        return result;
+    }
+    
+    function applyTooltipsToObject(obj) {
+        for (let key in obj) {
+            if (typeof obj[key] === 'string') {
+                obj[key] = applyTooltips(obj[key]);
+            } else if (typeof obj[key] === 'object') {
+                applyTooltipsToObject(obj[key]); // Recursive call
+            }
+        }
+    }
+    
+    applyTooltipsToObject(campaignTrail_temp.questions_json);
+    applyTooltipsToObject(campaignTrail_temp.answers_json);
+    applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);    

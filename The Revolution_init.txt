@@ -1,7 +1,7 @@
 campaignTrail_temp.election_json = [
     {
         "model": "campaign_trail.election",
-        "pk": 20,
+        "pk": 9,
         "fields": {
             "year": 2020,
             "display_year": "The Revolution",
@@ -18,7 +18,7 @@ campaignTrail_temp.election_json = [
 
 campaignTrail_temp.temp_election_list = [
     {
-        "id": 20,
+        "id": 9,
         "year": 2020,
         "is_premium": 0,
         "display_year": "The Revolution"
@@ -54,21 +54,22 @@ campaignTrail_temp.global_parameter_json = [
             "issue_stance_6_max": 0.71,
             "global_variance": 0.01,
             "state_variance": 0.005,
-            "question_count": 25,
+            "question_count": 32,
             "default_map_color_hex": "#C9C9C9",
             "no_state_map_color_hex": "#999999"
         }
     }
 ]
 
+
 campaignTrail_temp.candidate_json = [
     {
         "model": "campaign_trail.candidate",
-        "pk": 1001,
+        "pk": 21,
         "fields": {
             "first_name": "Bernie",
             "last_name": "Sanders",
-            "election": 20,
+            "election": 9,
             "party": "Democrat",
             "state": "Vermont",
             "priority": 1,
@@ -87,11 +88,80 @@ campaignTrail_temp.candidate_json = [
     },
     {
         "model": "campaign_trail.candidate",
-        "pk": 1002,
+        "pk": 45,
+        "fields": {
+            "first_name": "Mrs",
+            "last_name": "Libertarian",
+            "election": 9,
+            "party": "Libertarian",
+            "state": "South Carolina",
+            "priority": 3,
+            "description": "'",
+            "color_hex": "#c9b34c",
+            "secondary_color_hex": "#c9b34c",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 55,
+        "fields": {
+            "first_name": "Mr",
+            "last_name": "Green",
+            "election": 9,
+            "party": "Green",
+            "state": "New York",
+            "priority": 4,
+            "description": "'",
+            "color_hex": "#27772e",
+            "secondary_color_hex": "#27772e",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 65,
+        "fields": {
+            "first_name": "Mrs",
+            "last_name": "Republican",
+            "election": 9,
+            "party": "Republican",
+            "state": "California",
+            "priority": 5,
+            "description": "'",
+            "color_hex": "#FF0000",
+            "secondary_color_hex": "#ff9090",
+            "is_active": 0,
+            "image_url": "",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "</p>",
+            "candidate_score": 0,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 22,
         "fields": {
             "first_name": "Amy",
             "last_name": "Klobuchar",
-            "election": 20,
+            "election": 9,
             "party": "Democrat",
             "state": "Minnesota",
             "priority": 1,
@@ -107,37 +177,138 @@ campaignTrail_temp.candidate_json = [
             "candidate_score": 1,
             "running_mate": true
         }
+    },
+        {
+        "model": "campaign_trail.candidate",
+        "pk": 46,
+        "fields": {
+            "first_name": "Mrs",
+            "last_name": "Libertarian",
+            "election": 9,
+            "party": "Libertarian",
+            "state": "South Carolina",
+            "priority": 3,
+            "description": "'",
+            "color_hex": "#c9b34c",
+            "secondary_color_hex": "#c9b34c",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 56,
+        "fields": {
+            "first_name": "Mr",
+            "last_name": "Green",
+            "election": 9,
+            "party": "Green",
+            "state": "New York",
+            "priority": 4,
+            "description": "'",
+            "color_hex": "#27772e",
+            "secondary_color_hex": "#27772e",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 66,
+        "fields": {
+            "first_name": "Mrs",
+            "last_name": "Republican",
+            "election": 9,
+            "party": "Republican",
+            "state": "California",
+            "priority": 5,
+            "description": "'",
+            "color_hex": "#FF0000",
+            "secondary_color_hex": "#ff9090",
+            "is_active": 0,
+            "image_url": "",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
     }
 ]
 
 campaignTrail_temp.running_mate_json = [
     {
         "model": "campaign_trail.running_mate",
-        "pk": 109261,
+        "pk": 23,
         "fields": {
-            "candidate": 1001,
-            "running_mate": 1002
+            "candidate": 21,
+            "running_mate": 22
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 24,
+        "fields": {
+            "candidate": 45,
+            "running_mate": 46
+        }
+    },
+   {
+        "model": "campaign_trail.running_mate",
+        "pk": 25,
+        "fields": {
+            "candidate": 55,
+            "running_mate": 56
+        }
+    },
+     {
+        "model": "campaign_trail.running_mate",
+        "pk": 26,
+        "fields": {
+            "candidate": 65,
+            "running_mate": 66
         }
     }
 ]
 
 campaignTrail_temp.opponents_default_json = [
-    {
-        "election": 20,
-        "candidates": [
-            1001
-        ]
-    }
+  {
+      "election": 9,
+      "candidates": [
+          21,
+          45,
+          55,
+          65
+      ]
+  }
 ]
 
 campaignTrail_temp.opponents_weighted_json = [
-    {
-        "election": 20,
-        "candidates": [
-            1001
-        ]
-    }
+  {
+      "election": 9,
+      "candidates": [
+         21,
+         45,
+         55,
+         65
+      ]
+  }
 ]
+
+
 
 
 //#startcode
