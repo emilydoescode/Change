@@ -1,0 +1,90 @@
+//Code2
+function ctsAchievement(achievement, difficultyChecker = true){
+	if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier<=1)||!difficultyChecker)
+		if(campaignTrail_temp.CTS){
+		unlockAchievement(achievement);
+	}
+}
+
+campaignTrail_temp.questions_json = [
+    {
+        "model": "campaign_trail.question",
+        "pk": 42529,
+        "fields": {
+            "priority": 0,
+            "description": "They're all here, wonderful, beautiful crowds; can’t get enough. Forget the stars, ‘Hollywood nobodies’—who needs 'em? Not us. We’ve got the biggest, far bigger perhaps than any other in history, bigger than President Obama. And they’re all here, even the haters and losers—the swamp, we call them—because we won so badly. They said we couldn’t do it, 'You can’t win Florida, or Ohio, or Michigan,' but they came from all over, and oh, they’re waiting. They wanna know, ‘What’s Trump gonna say?’",
+            "likelihood": 1
+        }
+    },
+
+]
+
+campaignTrail_temp.answers_json = [
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42513,
+        "fields": {
+            "question": 42529,
+            "description": "put description here"
+        }
+    },
+]
+
+campaignTrail_temp.answer_feedback_json = [
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42594,
+        "fields": {
+            "answer": 42513,
+            "candidate": 77,
+            "answer_feedback": "The crowd, they love it, can’t get enough. After 8 painful years of Obama. They’re free. The great silent majority, silent no longer. And the media; they're losing their minds. 'What happened to America? How did this happen?' It’s really great television."
+        }
+    },
+]
+
+e = campaignTrail_temp
+
+
+campaignTrail_temp.candidate_image_url = 'https://files.catbox.moe/ua1kz7.png';
+campaignTrail_temp.running_mate_image_url = 'https://files.catbox.moe/wl1n5o.png';
+campaignTrail_temp.candidate_last_name = '';
+campaignTrail_temp.running_mate_last_name = '';
+campaignTrail_temp.running_mate_state_id = '469';
+campaignTrail_temp.player_answers = [];
+campaignTrail_temp.player_visits = [];
+campaignTrail_temp.answer_feedback_flg = 1;
+campaignTrail_temp.game_start_logging_id = '3662479';
+
+const targetNode = document.getElementById("game_window");
+const config = { attributes: true, childList: true, subtree: true };
+
+function onGameWindowChanged(mutationList, observer) {
+    updateQuestionBanner();
+}
+
+function updateQuestions(mutationList, observer) {
+    if (answerObject.fields.condition != null) {
+        answer.disabled = !(eval(answerObject.fields.condition));
+    }
+}
+
+const observer = new MutationObserver(onGameWindowChanged);
+    observer.observe(targetNode, config);
+
+e.VPisCandidate = 0;
+function updateQuestionBanner() {
+    let questionBanner = document.getElementById("campaign_sign");
+    if (!questionBanner || questionBanner.nodeName != "DIV") return;
+    let img = document.createElement('img');
+    if(e.VPisCandidate == 0)
+    {
+        img.src = 'https://files.catbox.moe/m8znut.png';
+        img.width = 210; // Adjust the width as needed
+        img.height = 106; // Adjust the height as needed
+    } 
+    questionBanner.replaceWith(img);
+}
+
+function tunnel(new_q){
+    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
+} 
