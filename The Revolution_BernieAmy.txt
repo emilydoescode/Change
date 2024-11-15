@@ -12,7 +12,7 @@ campaignTrail_temp.questions_json = [
         "pk": 42529,
         "fields": {
             "priority": 0,
-            "description": "They're all here, wonderful, beautiful crowds; can’t get enough. Forget the stars, ‘Hollywood nobodies’—who needs 'em? Not us. We’ve got the biggest, far bigger perhaps than any other in history, bigger than President Obama. And they’re all here, even the haters and losers—the swamp, we call them—because we won so badly. They said we couldn’t do it, 'You can’t win Florida, or Ohio, or Michigan,' but they came from all over, and oh, they’re waiting. They wanna know, ‘What’s Trump gonna say?’",
+            "description": "They never thought this day could be real. They never thought a man like you would stand behind the podium and deliver an inauguration speech. Obama shakes your hand, it's a peaceful day. As you look at that crowd, you know what they want: change, yet as the claps dwindle you realize that there is no one important rooting for you.",
             "likelihood": 1
         }
     },
@@ -766,7 +766,7 @@ campaignTrail_temp.issues_json = [
         "model": "campaign_trail.issue",
         "pk": 110,
         "fields": {
-            "name": "Social Democracy",
+            "name": "The Movement",
             "description": 0,
             "stance_1": "Revolutionaries",
             "stance_desc_1": 0,
@@ -778,9 +778,9 @@ campaignTrail_temp.issues_json = [
             "stance_desc_4": 0,
             "stance_5": "Moderate Reps",
             "stance_desc_5": 0,
-            "stance_6": "Crazy Idea",
+            "stance_6": "Proto-MAGA",
             "stance_desc_6": 0,
-            "stance_7": "MAGA Nutheads",
+            "stance_7": "Long Live Trump",
             "stance_desc_7": 0,
             "election": 9
         }

@@ -861,7 +861,7 @@ input {
     
     tooltipList = [
       // Q1
-      {searchString: "Hollywood nobodies", explanationText: "<img src=https://i.imgur.com/BcP7HEt.gif> Extremely Overrated!"},
+      {searchString: "Obama", explanationText: "<img src=https://files.catbox.moe/d47a57.png><br> Could have been worse."},
 
     ];
 
