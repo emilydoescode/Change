@@ -867,9 +867,9 @@ input {
 
 campaignTrail_temp.achievements = {
   
-  "El Diablo" : {
-  "image" : "https://i.imgur.com/Vk9WA5O.gif",
-  "description" : "Don't Get Impeached",
+  "Never Again" : {
+  "image" : "https://files.catbox.moe/3z1cta.png",
+  "description" : "Banish Satan",
   "cannotBeCheated" : true
   },
 }
