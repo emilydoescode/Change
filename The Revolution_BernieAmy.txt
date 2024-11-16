@@ -887,7 +887,7 @@ campaignTrail_temp.state_issue_score_json = [
             "state": 1100,
             "issue": 110,
             "state_issue_score": -0.55,
-            "weight": 7
+            "weight": 1
         }
     },
 
@@ -898,7 +898,7 @@ campaignTrail_temp.state_issue_score_json = [
             "state": 1100,
             "issue": 111,
             "state_issue_score": -0.55,
-            "weight": 7
+            "weight": 1
         }
     },
 ]
@@ -1024,3 +1024,54 @@ function getTooltips(str) {
     applyTooltipsToObject(campaignTrail_temp.questions_json);
     applyTooltipsToObject(campaignTrail_temp.answers_json);
     applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);    
+
+
+campaignTrail_temp.jet_data = [{
+    "nicknames": {
+        "23": "Bernie",
+        "24": "The Enemy",
+        "25": "Left-ish",
+        "26": "Toaster Haters"
+    },
+    "banner_enabled": false,
+    "banner_data": {},
+    "mapping_enabled": false,
+    "mapping_data": {}
+}
+]
+
+function tunnel(new_q){
+    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
+}
+
+
+//The Reps
+function switcheroo1() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(65)
+    e.candidate_json[id].fields.first_name = "Donald"
+    e.candidate_json[id].fields.last_name = "Trump"
+    e.candidate_json[id].fields.color_hex = "#850000" 
+}
+
+
+//The Greens
+function switcheroo41() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(55)
+    e.candidate_json[id].fields.first_name = "Dario"
+    e.candidate_json[id].fields.last_name = "Hunter"
+    e.candidate_json[id].fields.color_hex = "#1a511f" 
+}
+
+//The Libertarians
+function switcheroo21() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(45)
+    e.candidate_json[id].fields.first_name = "Jacob"
+    e.candidate_json[id].fields.last_name = "Hornberger"
+    e.candidate_json[id].fields.color_hex = "#dbcc87" 
+}
+
+
+e.cyoa = true
+
+
+

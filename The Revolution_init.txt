@@ -262,8 +262,8 @@ campaignTrail_temp.running_mate_json = [
         "model": "campaign_trail.running_mate",
         "pk": 24,
         "fields": {
-            "candidate": 45,
-            "running_mate": 46
+            "candidate": 65,
+            "running_mate": 66
         }
     },
    {
@@ -278,8 +278,8 @@ campaignTrail_temp.running_mate_json = [
         "model": "campaign_trail.running_mate",
         "pk": 26,
         "fields": {
-            "candidate": 65,
-            "running_mate": 66
+            "candidate": 45,
+            "running_mate": 46
         }
     }
 ]
@@ -443,9 +443,18 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
       "https://files.catbox.moe/cfdd2l.png",
       "https://files.catbox.moe/mi2ujo.mp3"
     );
+
+    const song2 = new Song(
+      "Revolution",
+      "The Beatles",
+      "https://files.catbox.moe/cfdd2l.png",
+      "https://files.catbox.moe/mi2ujo.mp3"
+    );
     
     
     playlist.addSong(song1);
+    playlist.addSong(song2);
+
 
   
     const playerContainer = document.createElement("div");
