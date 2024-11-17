@@ -12,7 +12,7 @@ campaignTrail_temp.questions_json = [
         "pk": 42529,
         "fields": {
             "priority": 0,
-            "description": "Hillary, Obama, The Movement, Warren, Klobuchar, Geithner, Pelosi. Reed. Murphy",
+            "description": "It doesn't feel like winter, though the rain does its fair share to remind you as it seeps into your coat. You look out at the gathered crowds over the Capitol's West Front; it warms your heart to see your supporters, most of them young and inspired, looking to you. Your eyes drift over to Speaker of the House Paul Ryan and Majority Leader Chuck Schumer. Your smile dims a touch. You try to take your mind back to your inaugural address—the first ever spoken by a Democratic Socialist, you remind yourself. What are the words you have chosen to chisel into the annals of history?",
             "likelihood": 1
         }
     },
@@ -25,7 +25,15 @@ campaignTrail_temp.answers_json = [
         "pk": 42513,
         "fields": {
             "question": 42529,
-            "description": "put description here"
+            "description": "When I set out on this political revolution —and yes, it is a political <i>revolution</i>—I did it not expecting to ever get here. I wanted to start a grassroots movement to fix the corrupt systems and institutions which affect the lives of everyday, working Americans. To go back on that dream now would be unthinkable. This address will focus on doing away with the broken systems of today, and establishing more perfect systems for the people that will last beyond tomorrow."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42514,
+        "fields": {
+            "question": 42529,
+            "description": "A lot of people in this country—with good reason, mind you—think I shouldn’t be up here. The establishment, the mainstream media, my opponent’s supporters—we need to extend an olive branch to them, adjust the rhetoric to acknowledge them too. This’ll be a revolution for <i>all</i> Americans, for those who voted for me, those who didn’t, and those who maybe had second thoughts at the ballot box."
         }
     },
 ]
@@ -5815,6 +5823,29 @@ campaignTrail_temp.candidate_state_multiplier_json = [
     }
 ]
 
+campaignTrail_temp.answer_score_global_json = [
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 42650,
+        "fields": {
+            "answer": 42513,
+            "candidate": 21,
+            "affected_candidate": 21,
+            "global_multiplier": -0.0175
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 42651,
+        "fields": {
+            "answer": 42514,
+            "candidate": 21,
+            "affected_candidate": 21,
+            "global_multiplier": -0.0175
+        }
+    },
+]
+
 campaignTrail_temp.issues_json = [
     {
         "model": "campaign_trail.issue",
@@ -5965,7 +5996,16 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 42513,
             "candidate": 21,
-            "answer_feedback": "The crowd, they love it, can’t get enough. After 8 painful years of Obama. They’re free. The great silent majority, silent no longer. And the media; they're losing their minds. 'What happened to America? How did this happen?' It’s really great television."
+            "answer_feedback": "The crowd cheers with a fervor unlike any you've seen in a lifetime of speeches. You take pause during one such ovation to glance over at the Congressional leaders. Paul Ryan smirks like he's caught you in a lie. Schumer politely claps, but looks more disappointed than anything. Nancy Pelosi seems capable of murder."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42595,
+        "fields": {
+            "answer": 42514,
+            "candidate": 21,
+            "answer_feedback": "As you descend the podium to a flurry of polite applause—rain probably depressed attendance—Obama gets up from his seat to shake your hand, the grin on his face tired yet knowing. Bush fidgets with his rain poncho in another seat, but there’s a glint in his eye, too, that you try not to think about."
         }
     },
 ]
@@ -6111,8 +6151,8 @@ function switcheroo1() {
 //The Greens
 function switcheroo61() {
     var id = e.candidate_json.map(p=>p.pk).indexOf(55)
-    e.candidate_json[id].fields.first_name = "Dario"
-    e.candidate_json[id].fields.last_name = "Hunter"
+    e.candidate_json[id].fields.first_name = "Jill"
+    e.candidate_json[id].fields.last_name = "Stein"
     e.candidate_json[id].fields.color_hex = "#1a511f" 
 }
 
