@@ -12,7 +12,7 @@ campaignTrail_temp.questions_json = [
         "pk": 42529,
         "fields": {
             "priority": 0,
-            "description": "Hillary, Obama, The Movement",
+            "description": "Hillary, Obama, The Movement, Warren, Klobuchar, Geithner, Pelosi. Reed. Murphy",
             "likelihood": 1
         }
     },

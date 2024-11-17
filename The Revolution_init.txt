@@ -869,17 +869,66 @@ input {
   addDynamicCSS();
     
     tooltipList = [
-      // Q1
       {searchString: "Obama", explanationText: "<img src=https://files.catbox.moe/d47a57.png><br> Could have been worse."},
       {searchString: "The Movement", explanationText: "<img src=https://files.catbox.moe/to1e17.png><br> Not me. <i>Us.</i>"},
       {searchString: "Hillary", explanationText: "<img src=https://files.catbox.moe/uiih7m.png><br> Demon on your shoulder."},
+      {searchString: "Geithner", explanationText: "<img src=https://files.catbox.moe/yppnhn.png><br> Puppet."},
+      {searchString: "Klobuchar", explanationText: "<img src=https://files.catbox.moe/88xxov.png><br> Launchpad."},
+      {searchString: "Warren", explanationText: "<img src=https://files.catbox.moe/39ukyc.png><br> Ahead of the curve."},
+      {searchString: "Pelosi", explanationText: "<img src=https://files.catbox.moe/tmsysf.png><br> Mouth of the establishment."},
+      {searchString: "Murphy", explanationText: "<img src=https://files.catbox.moe/en3egy.png><br> Clever."},
+      {searchString: "Reed", explanationText: "<img src=https://files.catbox.moe/hflzt5.png><br> Up to something."},
     ];
 
 campaignTrail_temp.achievements = {
   
-  "Never Again" : {
-  "image" : "https://files.catbox.moe/3z1cta.png",
+  "Mar-a-Lawful" : {
+  "image" : "https://files.catbox.moe/bconuu.png",
   "description" : "Banish Satan",
   "cannotBeCheated" : true
   },
+
+  "Regime Unchanged" : {
+  "image" : "https://files.catbox.moe/zgz0ui.png",
+  "description" : "Fly with an olive branch",
+  "cannotBeCheated" : true
+  },
+  
+  "Can't-Cun" : {
+  "image" : "https://files.catbox.moe/1ccfro.png",
+  "description" : "Avenge the victims",
+  "cannotBeCheated" : true
+  },
+  
+  "Outfoxed" : {
+  "image" : "https://files.catbox.moe/78bu1b.png",
+  "description" : "It won't happen here",
+  "cannotBeCheated" : true
+  },
+  
+  "Gifted Hands, Giftless Mind" : {
+  "image" : "https://files.catbox.moe/ilsfkr.png",
+  "description" : "Stop a surgery",
+  "cannotBeCheated" : true
+  },
+  
+  "White Texas" : {
+  "image" : "https://files.catbox.moe/m4viq8.png",
+  "description" : "Freeze an attorney",
+  "cannotBeCheated" : true
+  },
+
+  "Kansas City Shuffle" : {
+  "image" : "https://files.catbox.moe/hw7awy.png",
+  "description" : "Destroy a flopulist",
+  "cannotBeCheated" : true
+  },
+
+  "Old Ways Die" : {
+  "image" : "https://files.catbox.moe/kyzxbk.png",
+  "description" : "Cut the bushes",
+  "cannotBeCheated" : true
+  },
+
+
 }
