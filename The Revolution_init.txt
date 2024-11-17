@@ -3,7 +3,7 @@ campaignTrail_temp.election_json = [
         "model": "campaign_trail.election",
         "pk": 9,
         "fields": {
-            "year": 2020,
+            "year": 2000,
             "display_year": "The Revolution",
             "summary": "To the right, the Devil. To the left, Christ. A social democrat in the Presidency, delusional, laughable, and now real. 2016 was a meeting between the right's Savior and the left's Messiah. It was a clash of titans, and in the end, the old, white-haired face of Bernard \"Bernie\" Sanders came out victorious. His glory is unmatched. His achievements are remarkable. The <b>Revolution</b> has come to America.<br><br>\n\nTo his right, the whole of the United States political system. To his left, the fringe, weird pockets of communist sympathizers. His evenly divided Senate and his broken House all led to the downfall of a man who always sought to steer the ship in the right direction. <br><br>\n\nFrom home to home, the voices of the Republicans drown any sense of knowledge, they speak of a communist takeover. They are wrong. Now, with glory rising on the horizon, America will bear witness to the might and mercy of the Messiah.\n",
             "image_url": "https://files.catbox.moe/sve4nu.png",
@@ -19,7 +19,7 @@ campaignTrail_temp.election_json = [
 campaignTrail_temp.temp_election_list = [
     {
         "id": 9,
-        "year": 2020,
+        "year": 2000,
         "is_premium": 0,
         "display_year": "The Revolution"
     }
@@ -91,7 +91,7 @@ campaignTrail_temp.candidate_json = [
         "pk": 45,
         "fields": {
             "first_name": "Mrs",
-            "last_name": "Libertarian",
+            "last_name": "Toaster Hater",
             "election": 9,
             "party": "Libertarian",
             "state": "South Carolina",
@@ -114,7 +114,7 @@ campaignTrail_temp.candidate_json = [
         "pk": 55,
         "fields": {
             "first_name": "Mr",
-            "last_name": "Green",
+            "last_name": "Saboteurs",
             "election": 9,
             "party": "Green",
             "state": "New York",
@@ -137,7 +137,7 @@ campaignTrail_temp.candidate_json = [
         "pk": 65,
         "fields": {
             "first_name": "Mrs",
-            "last_name": "Republican",
+            "last_name": "The 1%",
             "election": 9,
             "party": "Republican",
             "state": "California",
@@ -183,7 +183,7 @@ campaignTrail_temp.candidate_json = [
         "pk": 46,
         "fields": {
             "first_name": "Mrs",
-            "last_name": "Libertarian",
+            "last_name": "Toaster Hater",
             "election": 9,
             "party": "Libertarian",
             "state": "South Carolina",
@@ -206,7 +206,7 @@ campaignTrail_temp.candidate_json = [
         "pk": 56,
         "fields": {
             "first_name": "Mr",
-            "last_name": "Green",
+            "last_name": "Saboteurs",
             "election": 9,
             "party": "Green",
             "state": "New York",
@@ -229,7 +229,7 @@ campaignTrail_temp.candidate_json = [
         "pk": 66,
         "fields": {
             "first_name": "Mrs",
-            "last_name": "Republican",
+            "last_name": "The 1%",
             "election": 9,
             "party": "Republican",
             "state": "California",
@@ -871,7 +871,8 @@ input {
     tooltipList = [
       // Q1
       {searchString: "Obama", explanationText: "<img src=https://files.catbox.moe/d47a57.png><br> Could have been worse."},
-
+      {searchString: "The Movement", explanationText: "<img src=https://files.catbox.moe/to1e17.png><br> Not me. <i>Us.</i>"},
+      {searchString: "Hillary", explanationText: "<img src=https://files.catbox.moe/uiih7m.png><br> Demon on your shoulder."},
     ];
 
 campaignTrail_temp.achievements = {
