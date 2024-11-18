@@ -8,7 +8,7 @@ campaignTrail_temp.election_json = [
             "summary": "To the right, the Devil. To the left, Christ. A social democrat in the Presidency, delusional, laughable, and now real. 2016 was a meeting between the right's Savior and the left's Messiah. It was a clash of titans, and in the end, the old, white-haired face of Bernard \"Bernie\" Sanders came out victorious. His glory is unmatched. His achievements are remarkable. The <b>Revolution</b> has come to America.<br><br>\n\nTo his right, the whole of the United States political system. To his left, the fringe, weird pockets of communist sympathizers. His evenly divided Senate and his broken House all led to the downfall of a man who always sought to steer the ship in the right direction. <br><br>\n\nFrom home to home, the voices of the Republicans drown any sense of knowledge, they speak of a communist takeover. They are wrong. Now, with glory rising on the horizon, America will bear witness to the might and mercy of the Messiah.\n",
             "image_url": "https://files.catbox.moe/sve4nu.png",
             "winning_electoral_vote_number": 270,
-            "advisor_url": "https://files.catbox.moe/radhwl.png",
+            "advisor_url": "https://files.catbox.moe/pl8pkl.png",
             "recommended_reading": "<ul>\n<li><a href=https://www.chicagotribune.com/opinion/editorials/ct-edit-chicago-tribune-biden-endorsement-20200925-lnyxsb5qvrftnjjmj3rnzj33jy-story.html>Our Case For Joe Biden</a></li>\n<li><a href=https://nationalinterest.org/feature/case-trump-166808>The Case For Trump</a></li>\n<li><a href=https://www.npr.org/2020/11/18/935730100/how-biden-won-ramping-up-the-base-and-expanding-margins-in-the-suburbs>How Biden Won: Ramping Up The Base And Expanding Margins In The Suburbs</a></li>\n<li><a href=https://www.prospectmagazine.co.uk/politics/donald-trump-joe-biden-us-election-almost-win-votes-concede>Why Did Trump Almost Win?</a></li>\n<li><a href=https://www.hoover.org/research/no-evidence-voter-fraud-guide-statistical-claims-about-2020-election>No Evidence For Voter Fraud: A Guide To Statistical Claims About The 2020 Election</a></li>\n</ul>",
             "has_visits": 1,
             "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
@@ -52,6 +52,7 @@ campaignTrail_temp.global_parameter_json = [
             "issue_stance_4_max": 0.125,
             "issue_stance_5_max": 0.3,
             "issue_stance_6_max": 0.71,
+            "issue_stance_7_max": 0.9,
             "global_variance": 0.01,
             "state_variance": 0.005,
             "question_count": 32,
