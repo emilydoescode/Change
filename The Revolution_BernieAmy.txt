@@ -1016,7 +1016,7 @@ campaignTrail_temp.running_mate_issue_score_json = [
 
 campaignTrail_temp.candidate_state_multiplier_json = [
     {
-        "model": "campaign_trail.candidate_state_multiplier",
+    "model": "campaign_trail.candidate_state_multiplier",
         "pk": 3000,
         "fields": {
             "candidate": 65,
@@ -1525,7 +1525,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 21,
             "state": 1100,
-            "state_multiplier": 0.01
+            "state_multiplier": 0.6
         }
     },
     {
@@ -1534,7 +1534,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 21,
             "state": 1101,
-            "state_multiplier": 0.05
+            "state_multiplier": 0.65
         }
     },
     {
@@ -6002,6 +6002,10 @@ campaignTrail_temp.answer_feedback_json = [
 
 e = campaignTrail_temp
 
+e.cyoa = true
+var songChange = 0;
+e.noCounter = 0
+
 
 campaignTrail_temp.candidate_image_url = 'https://files.catbox.moe/68dgi1.png';
 campaignTrail_temp.running_mate_image_url = 'https://files.catbox.moe/5j4zl4.png';
@@ -6155,7 +6159,6 @@ function switcheroo31() {
 }
 
 
-e.cyoa = true
 
 
 
