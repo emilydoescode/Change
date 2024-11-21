@@ -934,7 +934,7 @@ campaignTrail_temp.achievements = {
 
   "Old Ways Die" : {
   "image" : "https://files.catbox.moe/kyzxbk.png",
-  "description" : "Cut the bushes",
+  "description" : "Be the end of a succession line",
   "cannotBeCheated" : true
   },
 
