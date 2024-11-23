@@ -16,7 +16,15 @@ campaignTrail_temp.questions_json = [
             "likelihood": 1
         }
     },
-
+    {
+        "model": "campaign_trail.question",
+        "pk": 42530,
+        "fields": {
+            "priority": 0,
+            "description": "Haley, Nikki Haley",
+            "likelihood": 1
+        }
+    }
 ]
 
 campaignTrail_temp.answers_json = [
@@ -36,6 +44,14 @@ campaignTrail_temp.answers_json = [
             "description": "A lot of people in this country—with good reason, mind you—think I shouldn’t be up here. The establishment, the mainstream media, my opponent’s supporters—we need to extend an olive branch to them, adjust the rhetoric to acknowledge them too. This’ll be a revolution for <i>all</i> Americans, for those who voted for me, those who didn’t, and those who maybe had second thoughts at the ballot box."
         }
     },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42515,
+        "fields": {
+            "question": 42530,
+            "description": "tuah"
+        }
+    }
 ]
 
 campaignTrail_temp.states_json = [
@@ -6230,11 +6246,34 @@ campaignTrail_temp.answer_feedback_json = [
             "answer_feedback": "As you descend the podium to a flurry of polite applause—rain probably depressed attendance—Obama gets up from his seat to shake your hand, the grin on his face tired yet knowing. Bush fidgets with his rain poncho in another seat, but there’s a glint in his eye, too, that you try not to think about."
         }
     },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42596,
+        "fields": {
+            "answer": 42515,
+            "candidate": 21,
+            "answer_feedback": "Tuah."
+        }
+    },
 ]
 
 e = campaignTrail_temp
 
 e.cyoa = true
+var Reps = 0;
+var Sabs = 0;
+var Libs = 0;
+var Win = 0;
+var MajorWin = 0;
+var Midterms = 0;
+var Pop = 0;
+var Left = 0;
+var Hawk = 0
+var Mov = 1;
+var Scotus = 0;
+var Bills = 0;
+var BillFailure = 0;
+var Economy = 0;
 var songChange = 0;
 e.noCounter = 0
 
@@ -6372,7 +6411,48 @@ function switcheroo1() {
     e.candidate_json[id].fields.last_name = "Trump"
     e.candidate_json[id].fields.color_hex = "#850000" 
 }
-
+function switcheroo2() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(65)
+    e.candidate_json[id].fields.first_name = "Nikki"
+    e.candidate_json[id].fields.last_name = "Haley"
+    e.candidate_json[id].fields.color_hex = "#850000" 
+}
+function switcheroo3() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(65)
+    e.candidate_json[id].fields.first_name = "Paul"
+    e.candidate_json[id].fields.last_name = "Ryan"
+    e.candidate_json[id].fields.color_hex = "#850000" 
+}
+function switcheroo4() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(65)
+    e.candidate_json[id].fields.first_name = "Josh"
+    e.candidate_json[id].fields.last_name = "Hawley"
+    e.candidate_json[id].fields.color_hex = "#850000" 
+}
+function switcheroo5() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(65)
+    e.candidate_json[id].fields.first_name = "Greg"
+    e.candidate_json[id].fields.last_name = "Abbott"
+    e.candidate_json[id].fields.color_hex = "#850000" 
+}
+function switcheroo6() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(65)
+    e.candidate_json[id].fields.first_name = "Ben"
+    e.candidate_json[id].fields.last_name = "Carson"
+    e.candidate_json[id].fields.color_hex = "#850000" 
+}
+function switcheroo7() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(65)
+    e.candidate_json[id].fields.first_name = "Tucker"
+    e.candidate_json[id].fields.last_name = "Carslon"
+    e.candidate_json[id].fields.color_hex = "#850000" 
+}
+function switcheroo8() {
+    var id = e.candidate_json.map(p=>p.pk).indexOf(65)
+    e.candidate_json[id].fields.first_name = "Ted"
+    e.candidate_json[id].fields.last_name = "Cruz"
+    e.candidate_json[id].fields.color_hex = "#850000" 
+}
 
 //The Greens
 function switcheroo61() {
@@ -6389,8 +6469,5 @@ function switcheroo31() {
     e.candidate_json[id].fields.last_name = "Hornberger"
     e.candidate_json[id].fields.color_hex = "#dbcc87" 
 }
-
-
-
 
 
