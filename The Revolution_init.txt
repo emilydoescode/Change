@@ -174,7 +174,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
-            "description_as_running_mate": "<p>Few people had heard the name \"Amy Klobuchar\" outside of Minnesota before the election. The former Hennepin County attorney was mostly unknown to the general public, so it came as a surprise to many when she was chosen to help Bernie steer the nation, but why would they? Amy served as a balancing mechanism to Bernie, she's the moderate, the bipartisan, the \"reach across the aisle\" that he needed so desperately.</p>\n\n<p>As she finds herself getting used to the Naval Observatory, a feeling of awe and despair always follows her. She knows her importance for Bernie's agenda, she is the tie-breaker and the only person allowing anything to be passed.</p>",
+            "description_as_running_mate": "<p>What was Joe Biden? He searched for the Presidency his whole life, worked day and night in the Senate for decades, then played second fiddle to a man that outmatched him with a fraction's fraction of the experience. Amy Klobuchar has had more than enough conversations with Joe to know precisely what fate could well befall her, too. How could she not? She's the same \"moderating influence\" to the \"change candidate\" he was, and she didn't even get a lifetime of lawmaking first. She knows better than to sit back and let this happen to her. If Joe hadn't taught her by accident, she'd still have known from a good deal of experience in the DFL that if you don't seize life, it seizes you.<br><br>She doesn't agree with Bernie on a lot, heck, not even on most issues, but she knows that good can still be done here. She just prays she's not forgotten about it.</P>",
             "candidate_score": 1,
             "running_mate": true
         }
@@ -876,8 +876,21 @@ input {
       {searchString: "Chuck Schumer", explanationText: "<img src=https://files.catbox.moe/m67kb1.png><br> Middleman."},
       {searchString: "Paul Ryan", explanationText: "<img src=https://files.catbox.moe/5l1r80.png><br> The \"Great\" \"Moderator\"."},
       {searchString: "Nancy Pelosi", explanationText: "<img src=https://files.catbox.moe/tmsysf.png><br> Mouth of the establishment."},
+      {searchString: "Pelosi", explanationText: "<img src=https://files.catbox.moe/tmsysf.png><br> Mouth of the establishment."},
       {searchString: "Bush", explanationText: "<img src=https://files.catbox.moe/i02gou.png><br> Worst ever."},
 
+   //Q2
+      {searchString: "Merrick Garland", explanationText: "<img src=https://files.catbox.moe/3n9v92.png><br> Obama's burden."},
+      {searchString: "Garland", explanationText: "<img src=https://files.catbox.moe/3n9v92.png><br> Obama's burden."},
+      {searchString: "Your supporters", explanationText: "<img src=https://files.catbox.moe/to1e17.png><br> Not me. <i>Us.</i>"},
+      {searchString: "Citizens United v. FEC", explanationText: "<img src=https://files.catbox.moe/ylw553.png><br> Worst decision since Dred Scott."},
+      {searchString: "Joe Manchin", explanationText: "<img src=https://files.catbox.moe/myrp1i.png><br> Coal ghoul."},
+      {searchString: "Manchin", explanationText: "<img src=https://files.catbox.moe/myrp1i.png><br> Coal ghoul."},
+      {searchString: "Susan Collins", explanationText: "<img src=https://files.catbox.moe/63ax0c.png><br> More than meets the eye."},
+      {searchString: "Collins", explanationText: "<img src=https://files.catbox.moe/63ax0c.png><br> More than meets the eye."},
+      {searchString: "Lisa Murkowski", explanationText: "<img src=https://files.catbox.moe/w1cy27.png><br> Sane Republican."},
+      {searchString: "Murkowski", explanationText: "<img src=https://files.catbox.moe/w1cy27.png><br> Sane Republican."},
+      {searchString: "Adalberto Jordan", explanationText: "<img src=https://files.catbox.moe/5oasgc.png><br> From the Eleventh Circuit."},
 
       {searchString: "The Movement", explanationText: "<img src=https://files.catbox.moe/to1e17.png><br> Not me. <i>Us.</i>"},
       {searchString: "Hillary", explanationText: "<img src=https://files.catbox.moe/uiih7m.png><br> Demon on your shoulder."},

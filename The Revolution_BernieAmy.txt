@@ -21,7 +21,7 @@ campaignTrail_temp.questions_json = [
         "pk": 42530,
         "fields": {
             "priority": 0,
-            "description": "Haley, Nikki Haley",
+            "description": "Your cabinet is still going through the rough motions of passing through the Senate, and you already know there's one more issue waiting for you at the end of this tunnel. Supreme Court nominee Merrick Garland exists as the antithesis to your views on most issues, and he would absolutely defend the catastrophic Citizens United v. FEC decision, something you campaigned against day and night for the last several years. He would also pass through the Senate with 2/3rds support, and leave at least a few Senators more amenable to any legislation you'd put to the floor over the next four years. You know you can only infuriate your supporters or your party. Who do you pick?",
             "likelihood": 1
         }
     }
@@ -49,7 +49,15 @@ campaignTrail_temp.answers_json = [
         "pk": 42515,
         "fields": {
             "question": 42530,
-            "description": "tuah"
+            "description": "If you think I'm walking back on my convictions here, you've lost it. Citizens United v. FEC was a tragedy, the worst thing to happen to our democracy in decades, and that's saying something. Let's field Adalberto Jordan, young Cuban, uncontroversial. He's a change of pace, but he's good."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42516,
+        "fields": {
+            "question": 42530,
+            "description": "Do you know how many calls I'm getting from Schumer, from Pelosi, to keep Garland in? I don't know if you realize this, but I want legislation passed sometime in my term. Manchin's threatening to leave the party as it is, and I'm not about to give him a reason. Say it's too late to pull him out."
         }
     }
 ]
@@ -6252,9 +6260,18 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 42515,
             "candidate": 21,
-            "answer_feedback": "Tuah."
+            "answer_feedback": "Senate Dems react poorly, but his confirmation goes through nonetheless, 53-47, with Murkowski and Collins playing backup. Schumer reminds you that he can only whip so hard for so many floor bills. You try to keep it in mind as you settle into your new office."
         }
     },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42597,
+        "fields": {
+            "answer": 42516,
+            "candidate": 21,
+            "answer_feedback": "The vote goes through, 64-33. Markey, Merkley, and so forth all vote against him, but half of the Republican Conference support him, making it a done deal. Your colleagues from the Senate understand, but the people at home don't. Your supporters are scared and worried—does nothing really bring change?"
+        }
+    }
 ]
 
 e = campaignTrail_temp
