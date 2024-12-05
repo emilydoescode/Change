@@ -6291,6 +6291,7 @@ var Scotus = 0;
 var Bills = 0;
 var BillFailure = 0;
 var Economy = 0;
+var Cred = 1;
 var songChange = 0;
 e.noCounter = 0
 
@@ -6488,3 +6489,10 @@ function switcheroo31() {
 }
 
 
+cyoAdventure = function(a) {
+    ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
+    e.noCounter += 1
+        if (e.noCounter == 1) { 
+            campaignTrail_temp.election_json[0].fields.advisor_url = "https://files.catbox.moe/ba93ql.gif";   
+    }
+}
