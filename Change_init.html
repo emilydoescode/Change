@@ -1,3 +1,12 @@
+document.getElementById("inner_window_1").children[0].innerHTML = `<h3 style=\"color:#e4003b;\">Change</h3>`
+document.getElementById("inner_window_1").children[1].style.marginLeft = "-20px";
+document.getElementById("inner_window_1").children[1].style.width = "calc(100% + -40px)"; // Adjust the value as needed
+document.getElementById("inner_window_1").children[1].innerHTML = `
+  <b style="color:#e4003b;">Cosmogony of the Laborite</b><br><br>
+  <img src="https://files.catbox.moe/ev4z5h.png" alt="Image" style="width: %;">
+  <p>Where did it all begin?<br><br>Was it 1900? The age of the industrial revolution, the machine pumping cloth, fingers and blood, the era of the labor movement, the repeated pleas of the working class for more rights. Old, aging paper shows that the party appeared, but was it its beginning? No, it could not be.<br><br>Was it Attlee? Maker of NHS, partioner of India, decolonizer of the world. Defeated not at the ballot but by the system, the martyr of Labour, the one that could not be longer, forced to watch as Churchill ruined his creations. It could not be. Maybe it was under Wilson, the one who sought unity, or Callaghan, the one who sought destruction. It also could not be.<br><br>No. Labour clearly was born with Blair. A creation of struggle, of years in opposition. Labour was never meant to be a socialist arm to the people. It was made to be a machine. One that could crush enemies with speeches and vague promises of change, education and reform. Starmer understands these ideals, in fact, he understands it better than anyone. He uses and abuses anything to give himself more power, a political chameleon hoping to lead a nation after years of suffering and abuse by Tories. A man who promises change always to be far, far away from it.<p>`;
+document.getElementById("game_start").innerHTML = "<strong>Keep marching on.</strong>";
+
 campaignTrail_temp.election_json = [
     {
         "model": "campaign_trail.election",
@@ -316,28 +325,26 @@ campaignTrail_temp.opponents_weighted_json = [
 
 corrr = `
   <div style="font-size: 11px; font-family: monospace; color: white;">
-    <h2 style="font-style: normal;">
-      <img src="https://files.catbox.moe/hffrfb.png" alt="THE REVOLUTION" style="margin-top: 5px;">
-    </h2>
+
   </div>
   `;
 
 
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#1163ac";
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#e4003b";
 
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#1163ac";
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#e4003b";
 
 document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
 
 $("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
 
-$(".container")[0].style.backgroundColor = "#1163ac";
+$(".container")[0].style.backgroundColor = "#e4003b";
 
-document.getElementById("header").src = "https://files.catbox.moe/44q0tf.png";
+document.getElementById("header").src = "https://files.catbox.moe/gff5t7.png";
 
-document.body.background = "https://www.surforma.com/media/filer_public/2b/51/2b5161ec-ca8b-4d3c-af77-f3947dc19506/ls5230_silk_solid_blue.jpg";
+document.body.background = "https://files.catbox.moe/tm058t.png";
 
-document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#1163ac!important;}</style>";
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#e4003b!important;}</style>";
 
 //#endcode
 
@@ -439,10 +446,10 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
   
   
     const song1 = new Song(
-      "Revolution",
-      "The Beatles",
-      "https://i.imgur.com/p6vNjwb.png",
-      "https://files.catbox.moe/mi2ujo.mp3"
+      "Born to Lead",
+      "Operation Mincemeat",
+      "https://files.catbox.moe/dis0ol.png",
+      "https://files.catbox.moe/hf3fnt.mp3"
     );
 
     const song2 = new Song(
@@ -470,9 +477,9 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
   
   const infoContainer = document.createElement("div");
   infoContainer.id = "info-container";
-  infoContainer.style.backgroundImage = "url('https://i.imgur.com/MV2Q6eB.png')";
+  infoContainer.style.backgroundImage = "url('https://files.catbox.moe/m4o0nq.png')";
   infoContainer.style.backgroundSize = "cover"; // Optional: adjust based on your needs
-  infoContainer.style.color = "black"; // Set text color to black
+  infoContainer.style.color = "white"; // Set text color to black
   
   const songInfo = document.createElement("div");
   songInfo.id = "song-info";
@@ -654,7 +661,7 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
       display: flex;
       flex-direction: row;
     height:191px;
-      background-Image: url("https://i.imgur.com/j0UZT3f.png");
+      background-Image: url("https://files.catbox.moe/4ikxp4.png");
     }
   
     #display-box {
@@ -751,65 +758,28 @@ setupMusicPlayer();
 
  e = campaignTrail_temp
   
-  document.head.innerHTML += `
-  <link rel="stylesheet" href="https://kexanie.github.io/csswin10">
-  <style>
-  h3 {
-    font-size: 1.025em !important;
-    line-height: 17px;
-}
-label {
-    font-size: 0.9em !important; 
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
-    line-height: 1.0; 
-}
-input {
-    font-size: 0.9em !important; 
-    line-height: 17px; 
-}
 
-  
-  #game_window{max-width:1000px;}
-  </style>`
-  let contentBox = document.getElementsByClassName("content_box")[0];
-  let contentSingle = document.getElementsByClassName("content_single")[0];
-  
-  let containerRef = document.getElementsByClassName("container")[0];
-  
-  function createBanner(url, sibling, isLeft) {
-    let div = document.createElement("DIV");
-    let img = document.createElement("IMG");
-    div.style.position = "relative";
-    div.style.margin = "auto";
-    img.src = url;
-    
-    
-  
-    let x = document.createElement("DIV");
-    x.innerText = "_";
-    x.style.position = "absolute";
-    x.style.padding = "2px";
-    x.style.fontSize = "2pt";
-    x.style.cursor = "pointer";
-  
-    div.appendChild(x);
-  
-    div.appendChild(img);
-  
-    if(isLeft) {
-        sibling.parentNode.insertBefore(div, sibling);
-    }
-    else {
-        sibling.parentNode.appendChild(div);
-    }
-    x.onclick = () => div.style.visibility = "hidden";
-    x.onclick = () => img.style.visibility = "hidden";
-    return img;
-  }
-  
   function addDynamicCSS() {
     var css = `
-  
+
+        #inner_window_1 {
+            background-color: #0a0908;
+            height: 494px; 
+            color: #EFEFEF;
+          }
+
+
+        @font-face {
+          font-family: GDSTransport; /* set name */
+          src: url("https://files.catbox.moe/0vzdk6.woff"); /* url of the font */
+        }
+        
+        #election_summary.
+        #candidate_summary,
+        #running_mate_summary {
+            font-family: GDSTransport;
+        }
+
         label {
           cursor:default;
         }
@@ -826,6 +796,7 @@ input {
         }
   
         .mytooltip .mytooltiptext {
+            font-family: GDSTransport;
             width: 240px;
             background-color: #d8dee8;
             color: black;
