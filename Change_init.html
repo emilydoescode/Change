@@ -1,3 +1,14 @@
+
+campaignTrail_temp.modBoxTheme = {
+  "header_color": "#e4003b",
+  "header_text_color": "#ffffff",
+  "description_text_color": "#000000",
+  "description_background_color": "#ffffff",
+  "main_color": "#e4003b",
+  "secondary_color": "#e4003b",
+  "ui_text_color": "#FFFFFF"
+}
+
 document.getElementById("inner_window_1").children[0].innerHTML = `<h3 style=\"color:#e4003b;\">Change</h3>`
 document.getElementById("inner_window_1").children[1].style.marginLeft = "-20px";
 document.getElementById("inner_window_1").children[1].style.width = "calc(100% + -40px)"; // Adjust the value as needed
@@ -17,7 +28,7 @@ campaignTrail_temp.election_json = [
             "summary": "<p>Downing Street has never been quieter, It's a sign of freedom from ages of Conservative rule, the normalcy of a boring Prime Minister, maybe that is all that Britain needed. But Keir Starmer doesn't want it to be that way. After ending Corbyn's Red Terror over the party, he reigns supreme as the leader of Labour. No one would dare to oppose his word, and those who do are quickly purged without mercy. There are no longer factions within the party, there are only followers<br><br>Yet this empire in the Commons is a fib. His popularity keeps decreasing by the minute. The economy is still recovering from a triple shot of COVID, Brexit and austerity. The NHS is in a desolate state. Homes cost more than the GDP\'s of small nations. Britain is a dump. Britain needs <span style=\"color: #e4003b;\"><b>change.</b></span> But Keir will not deliver it unless forced to.<p>",
             "image_url": "https://files.catbox.moe/blvjpr.jpg",
             "winning_electoral_vote_number": 270,
-            "advisor_url": "https://files.catbox.moe/zp98n6.gif",
+            "advisor_url": "https://files.catbox.moe/svhmwk.jpg",
             "recommended_reading": "<p>beenis</p>",
             "has_visits": 1,
             "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
@@ -83,7 +94,7 @@ campaignTrail_temp.candidate_json = [
             "party": "Labour",
             "state": "Holborn and St Pancras",
             "priority": 1,
-            "description": "<p>Keir Starmer is, by all means, a nobody. His politics are as bland as possible, his ideals seem to be whatever will give him power, his promises are all a ruse, and him? He is the face of no movement, no charisma, and no charm, but he won, and he won big. Keir was the solution, the man who would rid the nation of Corbyn’s spirit of failure and get the machine created by Blair up and running again. <br><br>For fourteen years, the Tories tried to rule this nation and they run it to the ground. Keir won’t let this happen again. He has been given a mandate to fix this mess, a four-hundred-odd beast in the Commons, to ensure this. He will fight his old mentor, rid the nation of his filth. No one knows what hides behind the mask, only the one who wears it.</p>",
+            "description": "<p>Keir Starmer is, by all means, a nobody. His politics are as bland as possible, his ideals seem to be whatever will give him power, his promises are all a ruse, and him? He is the face of no movement, no charisma, and no charm, but he won, and he won big. Keir was the solution, the man who would rid the nation of Corbyn’s spirit of failure and got the machine up and running again. <br><br>Even then, Keir persists. He reminds himself of Blair and Major, of how the former inherited a disaster from the latter, only to turn Britain around and make it shine on the global stage once again. But he always remembers that he is not Blair. Blair had some stability; Blair had the EU. He has neither. Alas, this toolmaker's son must figure out a way to fix this broken mess, or be forgotten to the whims of history. He just needs to change.</p>",
             "color_hex": "#3c3cb5",
             "secondary_color_hex": null,
             "is_active": 1,
@@ -459,10 +470,16 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
       "https://files.catbox.moe/cjzeaz.mp3"
     );
     
-    
+    const song3 = new Song(
+      "The Man Who Sold the World",
+      "David Bowie",
+      "https://files.catbox.moe/mgbb5q.png",
+      "https://files.catbox.moe/rqvfwi.mp3"
+    );
+
     playlist.addSong(song1);
     playlist.addSong(song2);
-
+    playlist.addSong(song3);
 
   
     const playerContainer = document.createElement("div");
@@ -761,6 +778,9 @@ setupMusicPlayer();
 
   function addDynamicCSS() {
     var css = `
+        .inner_window_question {
+            height: auto;
+        }
 
         #inner_window_1 {
             background-color: #0a0908;
@@ -774,6 +794,14 @@ setupMusicPlayer();
             color: white; 
         }
 
+       #visit_window {
+            height: auto;
+        }
+
+        .overlay_window img {
+            width: 200px;
+            height: 150px;
+        }
 
         @font-face {
           font-family: GDSTransport; /* set name */
@@ -802,6 +830,9 @@ setupMusicPlayer();
             display: inline-block;
             cursor: pointer;
             background-color: #e4003b;
+            padding: 2px;
+            color: white;
+            font-style: italic;
         }
   
         .mytooltip .mytooltiptext {
@@ -851,35 +882,10 @@ setupMusicPlayer();
     
     tooltipList = [
     //Q1
-      {searchString: "Obama", explanationText: "<img src=https://files.catbox.moe/d47a57.png><br> Could have been worse."},
-      {searchString: "Schumer", explanationText: "<img src=https://files.catbox.moe/m67kb1.png><br> Middleman."},
-      {searchString: "Chuck Schumer", explanationText: "<img src=https://files.catbox.moe/m67kb1.png><br> Middleman."},
-      {searchString: "Paul Ryan", explanationText: "<img src=https://files.catbox.moe/5l1r80.png><br> The \"Great\" \"Moderator\"."},
-      {searchString: "Nancy Pelosi", explanationText: "<img src=https://files.catbox.moe/tmsysf.png><br> Mouth of the establishment."},
-      {searchString: "Pelosi", explanationText: "<img src=https://files.catbox.moe/tmsysf.png><br> Mouth of the establishment."},
-      {searchString: "Bush", explanationText: "<img src=https://files.catbox.moe/i02gou.png><br> Worst ever."},
-
-   //Q2
-      {searchString: "Merrick Garland", explanationText: "<img src=https://files.catbox.moe/3n9v92.png><br> Obama's burden."},
-      {searchString: "Garland", explanationText: "<img src=https://files.catbox.moe/3n9v92.png><br> Obama's burden."},
-      {searchString: "Your supporters", explanationText: "<img src=https://files.catbox.moe/to1e17.png><br> Not me. <i>Us.</i>"},
-      {searchString: "Citizens United v. FEC", explanationText: "<img src=https://files.catbox.moe/ylw553.png><br> Worst decision since Dred Scott."},
-      {searchString: "Joe Manchin", explanationText: "<img src=https://files.catbox.moe/myrp1i.png><br> Coal ghoul."},
-      {searchString: "Manchin", explanationText: "<img src=https://files.catbox.moe/myrp1i.png><br> Coal ghoul."},
-      {searchString: "Susan Collins", explanationText: "<img src=https://files.catbox.moe/63ax0c.png><br> More than meets the eye."},
-      {searchString: "Collins", explanationText: "<img src=https://files.catbox.moe/63ax0c.png><br> More than meets the eye."},
-      {searchString: "Lisa Murkowski", explanationText: "<img src=https://files.catbox.moe/w1cy27.png><br> Sane Republican."},
-      {searchString: "Murkowski", explanationText: "<img src=https://files.catbox.moe/w1cy27.png><br> Sane Republican."},
-      {searchString: "Adalberto Jordan", explanationText: "<img src=https://files.catbox.moe/5oasgc.png><br> From the Eleventh Circuit."},
-
-      {searchString: "The Movement", explanationText: "<img src=https://files.catbox.moe/to1e17.png><br> Not me. <i>Us.</i>"},
-      {searchString: "Hillary", explanationText: "<img src=https://files.catbox.moe/uiih7m.png><br> Demon on your shoulder."},
-      {searchString: "Geithner", explanationText: "<img src=https://files.catbox.moe/yppnhn.png><br> Puppet."},
-      {searchString: "Klobuchar", explanationText: "<img src=https://files.catbox.moe/88xxov.png><br> Launchpad."},
-      {searchString: "Warren", explanationText: "<img src=https://files.catbox.moe/39ukyc.png><br> Ahead of the curve."},
-      {searchString: "Murphy", explanationText: "<img src=https://files.catbox.moe/en3egy.png><br> Clever."},
-      {searchString: "Reed", explanationText: "<img src=https://files.catbox.moe/hflzt5.png><br> Up to something."},
-      {searchString: "Haley", explanationText: "<img src=https://files.catbox.moe/1c63f0.png><br> Grauated from the Dick Cheney Academy of Foreign Policy."},
+      {searchString: "London has never been quieter", explanationText: "<img src=https://files.catbox.moe/wfu8du.png>"},
+      {searchString: "Blair", explanationText: "<img src=https://files.catbox.moe/9gvckm.png><br>Made us win, then made us lose."},
+      {searchString: "Corbyn", explanationText: "<img src=https://files.catbox.moe/2tdtsh.png><br><b><i>Bastard</i></b>."},
+      {searchString: "Thatcher", explanationText: "<img src=https://files.catbox.moe/44bzzu.png><br>Brought us meaningful change."},
 
     ];
 

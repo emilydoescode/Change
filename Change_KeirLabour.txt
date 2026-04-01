@@ -9,10 +9,10 @@ function ctsAchievement(achievement, difficultyChecker = true){
 campaignTrail_temp.questions_json = [
     {
         "model": "campaign_trail.question",
-        "pk": 42529,
+        "pk": 42530,
         "fields": {
             "priority": 0,
-            "description": "It doesn't feel like winter, though the rain does its fair share to remind you as it seeps into your coat. You look out at the gathered crowds over the Capitol's West Front; it warms your heart to see your supporters, most of them young and inspired, looking to you. Your eyes drift over to Speaker of the House Paul Ryan and Majority Leader Chuck Schumer. Your smile dims a touch. You try to take your mind back to your inaugural address—the first ever spoken by a Democratic Socialist, you remind yourself. What are the words you have chosen to chisel into the annals of history?",
+            "description": "London has never been quieter; it had to be this way. This muted response to your landslide, one of such magnitude that not even Blair managed to pull it off, probably happened because everyone expected this to happen. The Tories managed to win something; they're still alive, but you? You're the Prime Minister, the man who will lead the government of Britain after years in opposition. It wasn't the victory that the left, the Corbyn left, wanted, but it's the victory they're going to have to deal with. As the doors to Westminster open once again after purdah and King Charles gives another one of his speeches, you prepare yourself to present the new government's agenda. What do you begin with?",
             "likelihood": 1
         }
     },
@@ -32,16 +32,16 @@ campaignTrail_temp.answers_json = [
         "model": "campaign_trail.answer",
         "pk": 42513,
         "fields": {
-            "question": 42529,
-            "description": "When I set out on this political revolution —and yes, it is a political <i>revolution</i>—I did it not expecting to ever get here. I wanted to start a grassroots movement to fix the corrupt systems and institutions which affect the lives of everyday, working Americans. To go back on that dream now would be unthinkable. This address will focus on doing away with the broken systems of today, and establishing more perfect systems for the people that will last beyond tomorrow."
+            "question": 42530,
+            "description": "Britain needs to change, and it needs to change now. We must renationalise British Rail. Thatcher was a great woman, a prime minister who brought stability to the nation, but this was a grave mistake of hers, I believe. In the same time we take to build one railway, China builds seven."
         }
     },
     {
         "model": "campaign_trail.answer",
         "pk": 42514,
         "fields": {
-            "question": 42529,
-            "description": "A lot of people in this country—with good reason, mind you—think I shouldn’t be up here. The establishment, the mainstream media, my opponent’s supporters—we need to extend an olive branch to them, adjust the rhetoric to acknowledge them too. This’ll be a revolution for <i>all</i> Americans, for those who voted for me, those who didn’t, and those who maybe had second thoughts at the ballot box."
+            "question": 42530,
+            "description": "What we need to understand is that Britain's economy is suffering. The previous governments' measures of austerity, together with the effects of COVID, showed how fragile our economy truly was, especially for working-class people. Reeves and I have prepared several bills we wish to pass during our time here to make Britain grow stronger."
         }
     },
     {
@@ -49,15 +49,7 @@ campaignTrail_temp.answers_json = [
         "pk": 42515,
         "fields": {
             "question": 42530,
-            "description": "If you think I'm walking back on my convictions here, you've lost it. Citizens United v. FEC was a tragedy, the worst thing to happen to our democracy in decades, and that's saying something. Let's field Adalberto Jordan, young Cuban, uncontroversial. He's a change of pace, but he's good."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 42516,
-        "fields": {
-            "question": 42530,
-            "description": "Do you know how many calls I'm getting from Schumer, from Pelosi, to keep Garland in? I don't know if you realize this, but I want legislation passed sometime in my term. Manchin's threatening to leave the party as it is, and I'm not about to give him a reason. Say it's too late to pull him out."
+            "description": "It is clear to all of us that one of the most pressing problems of our time is immigration—illegal immigration. We need to be tough on policing the channel, making sure only those truly in need can come in while keeping the criminals and smugglers out."
         }
     }
 ]
@@ -6242,7 +6234,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 42513,
             "candidate": 21,
-            "answer_feedback": "The crowd cheers with a fervor unlike any you've seen in a lifetime of speeches. You take pause during one such ovation to glance over at the Congressional leaders. Paul Ryan smirks like he's caught you in a lie. Schumer politely claps, but looks more disappointed than anything. Nancy Pelosi seems capable of murder."
+            "answer_feedback": "Everyone expected you to bring this as one of your bills, but not as the main one. What would've been just a small column in the middle of a tabloid has become the news story of the week. How dare the Prime Minister defame the great Thatcher? \"Is Keir the new Corbyn?\" stamps the front page of The Sun. Even with this majority, this control over the Commons, you are taken aback due to the backlash. Haigh says it's better to keep the nationalisation for later. It's better that way."
         }
     },
     {
@@ -6251,7 +6243,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 42514,
             "candidate": 21,
-            "answer_feedback": "As you descend the podium to a flurry of polite applause—rain probably depressed attendance—Obama gets up from his seat to shake your hand, the grin on his face tired yet knowing. Bush fidgets with his rain poncho in another seat, but there’s a glint in his eye, too, that you try not to think about."
+            "answer_feedback": "Your thirty-nine bills reek of Reeves. They have elements of progressive rhetoric, sure, but the two-child cap continues to linger on as a sore thumb. You don't want to remove it, it's financial stability for us, it's safe, and it's something that makes the right vote for us. But it's not something that the thick skulls that are the independent MPs get it. They want it abolished, they want it abolished now."
         }
     },
     {
@@ -6260,16 +6252,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 42515,
             "candidate": 21,
-            "answer_feedback": "Senate Dems react poorly, but his confirmation goes through nonetheless, 53-47, with Murkowski and Collins playing backup. Schumer reminds you that he can only whip so hard for so many floor bills. You try to keep it in mind as you settle into your new office."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 42597,
-        "fields": {
-            "answer": 42516,
-            "candidate": 21,
-            "answer_feedback": "The vote goes through, 64-33. Markey, Merkley, and so forth all vote against him, but half of the Republican Conference support him, making it a done deal. Your colleagues from the Senate understand, but the people at home don't. Your supporters are scared and worried—does nothing really bring change?"
+            "answer_feedback": "As Reform and The Sun begin congratulating you on keeping the tough-on-the-border promises you had on the campaign trail, you can help but feel a strong sense of pride; you did it, you won them over. Yet, what is the point of doing so when the Corbyn left continues acting up, when there are elements within our own party that are against this tougher policy? It doesn't matter anymore; you've won over those you needed to win over. As the votes come in, most of Labour votes yes, most of Reform votes no."
         }
     }
 ]
@@ -6310,10 +6293,6 @@ function updateQuestions(mutationList, observer) {
 
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
-    e.noCounter += 1
-        if (e.noCounter == 1) { 
-            campaignTrail_temp.election_json[0].fields.advisor_url = "https://files.catbox.moe/ba93ql.gif";   
-    }
 }
 
 const observer = new MutationObserver(onGameWindowChanged);
