@@ -6284,8 +6284,8 @@ var ForPol = 0;
 e.noCounter = 0
 
 
-campaignTrail_temp.candidate_image_url = 'https://files.catbox.moe/68dgi1.png';
-campaignTrail_temp.running_mate_image_url = 'https://files.catbox.moe/5j4zl4.png';
+campaignTrail_temp.candidate_image_url = 'https://files.catbox.moe/sb6i0n.png';
+campaignTrail_temp.running_mate_image_url = 'https://files.catbox.moe/x4niif.png';
 campaignTrail_temp.candidate_last_name = '';
 campaignTrail_temp.running_mate_last_name = '';
 campaignTrail_temp.running_mate_state_id = '469';
@@ -6326,7 +6326,7 @@ function updateQuestionBanner() {
     let img = document.createElement('img');
     if(e.VPisCandidate == 0)
     {
-        img.src = 'https://files.catbox.moe/m8znut.png';
+        img.src = 'https://files.catbox.moe/de1it8.png';
         img.width = 210; // Adjust the width as needed
         img.height = 106; // Adjust the height as needed
     } 
@@ -6348,9 +6348,9 @@ let savedY = null;
 //this creates the variable maps, change it according to you needs
 
 const WinsMap = {
-    "-2": `The Keir Ministry has <i><span style="color: #e4003b;">no</i></span> <b>wins</b>. (<span style="color:#e4003b;">-2</span>)`,
-    "-1": `The Keir Ministry has <i><span style="color: #e4003b;">no</i></span> <b>wins</b>. (<span style="color:#e4003b;">-1</span>)`,
-    "0": `The Keir Ministry has <i><span style="color: #e4003b;">no</i></span> <b>wins</b>. (<span style="color:#e4003b;">0</span>)`,
+    "-2": `The Keir Ministry has <i><span style="color: #e4003b;">bugger-all</i></span> <b>wins</b>. (<span style="color:#e4003b;">-2</span>)`,
+    "-1": `The Keir Ministry has <i><span style="color: #e4003b;">bugger-all</i></span> <b>wins</b>. (<span style="color:#e4003b;">-1</span>)`,
+    "0": `The Keir Ministry has <i><span style="color: #e4003b;">bugger-all</i></span> <b>wins</b>. (<span style="color:#e4003b;">0</span>)`,
     "1": `The Keir Ministry has <i><span style="color: #e4003b;">few</i></span> <b>wins</b>. (<span style="color:#e4003b;">1</span>)`,
     "2": `The Keir Ministry has <i><span style="color: #e4003b;">few</i></span> <b>wins</b>. (<span style="color:#e4003b;">2</span>)`,
     "3": `The Keir Ministry has <i><span style="color: #ef7625;">notable</i></span> <b>wins</b>. (<span style="color:#ef7625;">3</span>)`,
@@ -6362,12 +6362,12 @@ const WinsMap = {
     "9": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">9</span>)`,
 };
 const PopMap = {
-    "-5": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-5</span>)`,
-    "-4": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-4</span>)`,
-    "-3": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-3</span>)`,
-    "-2": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-2</span>)`,
-    "-1": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-1</span>)`,
-    "0": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">0</span>)`,
+    "-5": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-5</span>)`,
+    "-4": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-4</span>)`,
+    "-3": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-3</span>)`,
+    "-2": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-2</span>)`,
+    "-1": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-1</span>)`,
+    "0": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">0</span>)`,
     "1": `Keir has <i><span style="color: #ef7625;">weak</i></span> <b>popularity</b>. (<span style="color:#ef7625;">1</span>)`,
     "2": `Keir has <i><span style="color: #ef7625;">tolerable</i></span> <b>popularity</b>. (<span style="color:#ef7625;">2</span>)`,
     "3": `Keir has <i><span style="color: #106936;">strong</i></span> <b>popularity</b>. (<span style="color:#106936;">3</span>)`,
