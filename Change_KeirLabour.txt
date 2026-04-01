@@ -6277,22 +6277,10 @@ campaignTrail_temp.answer_feedback_json = [
 e = campaignTrail_temp
 
 e.cyoa = true
-var Reps = 0;
-var Sabs = 0;
-var Libs = 0;
-var Win = 0;
-var MajorWin = 0;
-var Midterms = 0;
+var Wins = 0;
 var Pop = 0;
-var Left = 0;
-var Hawk = 0
-var Mov = 1;
-var Scotus = 0;
-var Bills = 0;
-var BillFailure = 0;
-var Economy = 0;
-var Cred = 1;
-var songChange = 0;
+var Econ = 0;
+var ForPol = 0;
 e.noCounter = 0
 
 
@@ -6319,6 +6307,15 @@ function updateQuestions(mutationList, observer) {
     }
 }
 
+
+cyoAdventure = function(a) {
+    ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
+    e.noCounter += 1
+        if (e.noCounter == 1) { 
+            campaignTrail_temp.election_json[0].fields.advisor_url = "https://files.catbox.moe/ba93ql.gif";   
+    }
+}
+
 const observer = new MutationObserver(onGameWindowChanged);
     observer.observe(targetNode, config);
 
@@ -6336,98 +6333,12 @@ function updateQuestionBanner() {
     questionBanner.replaceWith(img);
 }
 
-function tunnel(new_q){
-    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
-} 
-
-function getTooltips(str) {
-        let matches = [];
-    
-        tooltipList.forEach((tooltip, index) => {
-            // Adjust the regex to match searchString potentially surrounded by “ and followed by optional punctuation
-           let regex = new RegExp(`(?<=\\b|\\s|^|“)${tooltip.searchString}(?=[.,;!?]?\\b|\\s|”|$)`, 'g');
-    
-    
-            let match;
-            while ((match = regex.exec(str)) !== null) {
-                matches.push({
-                    start: match.index + (match[0].startsWith('“') ? 1 : 0), // Adjust for potential starting “
-                    end: match.index + match[0].length - (match[0].endsWith('”') ? 1 : 0) - (match[2] ? 1 : 0), 
-                    tooltipIndex: index
-                });
-            }
-        });
-    
-        // Sort by starting position; if two start at the same position, longer match comes first
-        matches.sort((a, b) => a.start - b.start || b.end - b.start - (a.end - a.start));
-    
-        // Filter out overlaps
-        for (let i = 0; i < matches.length - 1; ) {
-            if (matches[i + 1].start < matches[i].end) {
-                matches.splice(i + 1, 1); // Remove the next match since it overlaps
-            } else {
-                i++; // Move to next match
-            }
-        }
-    
-        return matches;
-    }
-    function applyTooltips(str) {
-        const matches = getTooltips(str);
-        let result = '';
-        let lastIndex = 0;
-    
-        matches.forEach(match => {
-            const tooltip = tooltipList[match.tooltipIndex];
-            result += str.slice(lastIndex, match.start);
-            result += `<span class='mytooltip'>${tooltip.searchString}<span class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
-            lastIndex = match.end;
-        });
-    
-        result += str.slice(lastIndex); // Add the remainder of the original string
-        return result;
-    }
-    
-    function applyTooltipsToObject(obj) {
-        for (let key in obj) {
-            if (typeof obj[key] === 'string') {
-                obj[key] = applyTooltips(obj[key]);
-            } else if (typeof obj[key] === 'object') {
-                applyTooltipsToObject(obj[key]); // Recursive call
-            }
-        }
-    }
-    
-    applyTooltipsToObject(campaignTrail_temp.questions_json);
-    applyTooltipsToObject(campaignTrail_temp.answers_json);
-    applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);    
-
-
-campaignTrail_temp.jet_data = [{
-    "nicknames": {
-        "21": "Bernie",
-        "65": "The 1%",
-        "45": "Saboteurs",
-        "55": "Toaster Haters"
-    },
-    "banner_enabled": false,
-    "banner_data": {},
-    "mapping_enabled": false,
-    "mapping_data": {}
-}
-]
-
-function tunnel(new_q){
-    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
-}
-
-
 //here you will put characters that appear l8r
  let KennedyCand = { photo: 'https://i.imgur.com/eyQpezn.png', name: 'Ted Kennedy', text: 'Kennedy\'s presidential ambitions were buried well over a decade ago, to awaken this giant the White House must\'ve suffered a lethal shake up.', button: 'Defer', id: 'KENNEDY_A'}
 
 // these are the starting candidates
 const menuItemsA = [
-    { photo: 'https://i.imgur.com/EqFrWEp.png', name: 'Al Gore', text: 'The former Vice President and presumptive front runner doesn\'t spend his days fantasizing about another run against you. However a major shake-up to the nation\'s international standing may make him view it as a necessity.', button: 'Defer', id: 'GORE_A'}
+   { photo: 'https://files.catbox.moe/t6e39i.png', name: 'Morgan McSweeney', text: 'The architect of Starmerism, the man who brought Labour back from nothing, a slimy bastard. You owe everything to him and he might come back soon to demand payment.', button: 'Defer', id: 'MCSWEENEY_A'}
 ]
 
 
@@ -6437,74 +6348,70 @@ let savedY = null;
 //this creates the variable maps, change it according to you needs
 
 const WinsMap = {
-    "-2": `Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b>wins</b>. (<span style="color:#A84343;">-2</span>)`,
-    "-1": `Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b>wins</b>. (<span style="color:#A84343;">-1</span>)`,
-    "0": `Bush-Cheney have had <i><span style="color: #A84343;">no</i></span> <b>wins</b>. (<span style="color:#A84343;">0</span>)`,
-    "1": `Bush-Cheney have had <i><span style="color: #A84343;">few</i></span> <b>wins</b>. (<span style="color:#A84343;">1</span>)`,
-    "2": `Bush-Cheney have had <i><span style="color: #A84343;">few</i></span> <b>wins</b>. (<span style="color:#A84343;">2</span>)`,
-    "3": `Bush-Cheney have had <i><span style="color: #E0CD6D;">notable</i></span> <b>wins</b>. (<span style="color:#E0CD6D;">3</span>)`,
-    "4": `Bush-Cheney have had <i><span style="color: #E0CD6D;">notable</i></span> <b>wins</b>. (<span style="color:#E0CD6D;">4</span>)`,
-    "5": `Bush-Cheney have had <i><span style="color: #92C47D;">tons</i></span> of <b>wins</b>. (<span style="color:#92C47D;">5</span>)`,
-    "6": `Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b>wins</b>. (<span style="color:#92C47D;">6</span>)`,
-    "7": `Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b>wins</b>. (<span style="color:#92C47D;">7</span>)`,
-    "8": `Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b>wins</b>. (<span style="color:#92C47D;">8</span>)`,
-    "9": `Bush-Cheney have had <i><span style="color: #92C47D;">a brazilian</i></span> <b>wins</b>. (<span style="color:#92C47D;">9</span>)`,
+    "-2": `The Keir Ministry has <i><span style="color: #e4003b;">no</i></span> <b>wins</b>. (<span style="color:#e4003b;">-2</span>)`,
+    "-1": `The Keir Ministry has <i><span style="color: #e4003b;">no</i></span> <b>wins</b>. (<span style="color:#e4003b;">-1</span>)`,
+    "0": `The Keir Ministry has <i><span style="color: #e4003b;">no</i></span> <b>wins</b>. (<span style="color:#e4003b;">0</span>)`,
+    "1": `The Keir Ministry has <i><span style="color: #e4003b;">few</i></span> <b>wins</b>. (<span style="color:#e4003b;">1</span>)`,
+    "2": `The Keir Ministry has <i><span style="color: #e4003b;">few</i></span> <b>wins</b>. (<span style="color:#e4003b;">2</span>)`,
+    "3": `The Keir Ministry has <i><span style="color: #ef7625;">notable</i></span> <b>wins</b>. (<span style="color:#ef7625;">3</span>)`,
+    "4": `The Keir Ministry has <i><span style="color: #ef7625;">notable</i></span> <b>wins</b>. (<span style="color:#ef7625;">4</span>)`,
+    "5": `The Keir Ministry has <i><span style="color: #106936;">tons</i></span> of <b>wins</b>. (<span style="color:#106936;">5</span>)`,
+    "6": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">6</span>)`,
+    "7": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">7</span>)`,
+    "8": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">8</span>)`,
+    "9": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">9</span>)`,
 };
 const PopMap = {
-    "-5": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-5</span>)`,
-    "-4": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-4</span>)`,
-    "-3": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-3</span>)`,
-    "-2": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-2</span>)`,
-    "-1": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">-1</span>)`,
-    "0": `Bush has <i><span style="color: #A84343;">piss-poor</i></span> <b>congressional relations</b>. (<span style="color:#A84343;">0</span>)`,
-    "1": `Bush has <i><span style="color: #E0CD6D;">weak</i></span> <b>congressional relations</b>. (<span style="color:#E0CD6D;">1</span>)`,
-    "2": `Bush has <i><span style="color: #E0CD6D;">tolerable</i></span> <b>congressional relations</b>. (<span style="color:#E0CD6D;">2</span>)`,
-    "3": `Bush has <i><span style="color: #92C47D;">strong</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">3</span>)`,
-    "4": `Bush has <i><span style="color: #92C47D;">strong</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">4</span>)`,
-    "5": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">5</span>)`,
-    "6": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">6</span>)`,
-    "7": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">7</span>)`,
-    "8": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">8</span>)`,
-    "9": `Bush has <i><span style="color: #92C47D;">a brazilian</i></span> <b>congressional relations</b>. (<span style="color:#92C47D;">9</span>)`,
+    "-5": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-5</span>)`,
+    "-4": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-4</span>)`,
+    "-3": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-3</span>)`,
+    "-2": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-2</span>)`,
+    "-1": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-1</span>)`,
+    "0": `Keir has <i><span style="color: #e4003b;">piss-poor</i></span> <b>popularity</b>. (<span style="color:#e4003b;">0</span>)`,
+    "1": `Keir has <i><span style="color: #ef7625;">weak</i></span> <b>popularity</b>. (<span style="color:#ef7625;">1</span>)`,
+    "2": `Keir has <i><span style="color: #ef7625;">tolerable</i></span> <b>popularity</b>. (<span style="color:#ef7625;">2</span>)`,
+    "3": `Keir has <i><span style="color: #106936;">strong</i></span> <b>popularity</b>. (<span style="color:#106936;">3</span>)`,
+    "4": `Keir has <i><span style="color: #106936;">strong</i></span> <b>popularity</b>. (<span style="color:#106936;">4</span>)`,
+    "5": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">5</span>)`,
+    "6": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">6</span>)`,
+    "7": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">7</span>)`,
+    "8": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">8</span>)`,
+    "9": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">9</span>)`,
 };
 const EconMap = {
-    "-5": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-5</span>)`,
-    "-4": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-4</span>)`,
-    "-3": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-3</span>)`,
-    "-2": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-2</span>)`,
-    "-1": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">-1</span>)`,
-    "0": `The Administration has <i><span style="color: #A84343;">no</i></span> <b>credibility</b>. (<span style="color:#A84343;">0</span>)`,
-    "1": `The Administration has <i><span style="color: #E0CD6D;">little</i></span> <b>credibility</b>. (<span style="color:#E0CD6D;">1</span>)`,
-    "2": `The Administration has <i><span style="color: #E0CD6D;">decent</i></span> <b>credibility</b>. (<span style="color:#E0CD6D;">2</span>)`,
-    "3": `The Administration has <i><span style="color: #E0CD6D;">decent</i></span> <b>credibility</b>. (<span style="color:#E0CD6D;">3</span>)`,
-    "4": `The Administration has <i><span style="color: #92C47D;">strong</i></span> <b>credibility</b>. (<span style="color:#92C47D;">4</span>)`,
-    "5": `The Administration has <i><span style="color: #92C47D;">strong</i></span> <b>credibility</b>. (<span style="color:#92C47D;">5</span>)`,
-    "6": `The Administration has <i><span style="color: #92C47D;">strong</i></span> <b>credibility</b>. (<span style="color:#92C47D;">6</span>)`,
-    "7": `The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b>credibility</b>. (<span style="color:#92C47D;">7</span>)`,
-    "8": `The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b>credibility</b>. (<span style="color:#92C47D;">8</span>)`,
-    "9": `The Administration has <i><span style="color: #92C47D;">a brazilian</i></span> <b>credibility</b>. (<span style="color:#92C47D;">9</span>)`,
+    "-5": `The <b>economy</b> has <i><span style="color: #e4003b;">collpased</i></span>. (<span style="color:#e4003b;">-5</span>)`,
+    "-4": `The <b>economy</b> is <i><span style="color: #e4003b;">in crisis</i></span>. (<span style="color:#e4003b;">-4</span>)`,
+    "-3": `The <b>economy</b> is <i><span style="color: #e4003b;">struggling</i></span>. (<span style="color:#e4003b;">-3</span>)`,
+    "-2": `The <b>economy</b> is <i><span style="color: #e4003b;">struggling</i></span>. (<span style="color:#e4003b;">-2</span>)`,
+    "-1": `The <b>economy</b> is <i><span style="color: #e4003b;">struggling</i></span>. (<span style="color:#e4003b;">-1</span>)`,
+    "0": `The <b>economy</b> is <i><span style="color: #e4003b;">middling</i></span>. (<span style="color:#e4003b;">0</span>)`,
+    "1": `The <b>economy</b> is <i><span style="color: #ef7625;">middling</i></span>. (<span style="color:#ef7625;">1</span>)`,
+    "2": `The <b>economy</b> is <i><span style="color: #ef7625;">middling</i></span>. (<span style="color:#ef7625;">2</span>)`,
+    "3": `The <b>economy</b> is <i><span style="color: #ef7625;">decent</i></span>. (<span style="color:#ef7625;">3</span>)`,
+    "4": `The <b>economy</b> is <i><span style="color: #106936;">strong</i></span>. (<span style="color:#106936;">4</span>)`,
+    "5": `The <b>economy</b> is <i><span style="color: #106936;">strong</i></span>. (<span style="color:#106936;">5</span>)`,
+    "6": `The <b>economy</b> is <i><span style="color: #106936;">strong</i></span>. (<span style="color:#106936;">6</span>)`,
+    "7": `The <b>economy</b> is <i><span style="color: #106936;">booming</i></span>. (<span style="color:#106936;">7</span>)`,
+    "8": `The <b>economy</b> is <i><span style="color: #106936;">booming</i></span>. (<span style="color:#106936;">8</span>)`,
+    "9": `The <b>economy</b> is <i><span style="color: #106936;">booming</i></span>. (<span style="color:#106936;">9</span>)`,
 };
 const ForPolMap = {
-    "-5": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-5</span>)`,
-    "-4": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-4</span>)`,
-    "-3": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-3</span>)`,
-    "-2": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-2</span>)`,
-    "-1": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">-1</span>)`,
-    "0": `The Country has <i><span style="color: #A84343;">no</i></span> <b>appetite for war</b>. (<span style="color:#A84343;">0</span>)`,
-    "1": `The Country has <i><span style="color: #E0CD6D;">little</i></span> <b>appetite for war</b>. (<span style="color:#E0CD6D;">1</span>)`,
-    "2": `The Country has <i><span style="color: #E0CD6D;">some</i></span> <b>appetite for war</b>. (<span style="color:#E0CD6D;">2</span>)`,
-    "3": `The Country has <i><span style="color: #E0CD6D;">some</i></span> <b>appetite for war</b>. (<span style="color:#E0CD6D;">3</span>)`,
-    "4": `The Country has a <i><span style="color: #92C47D;">strong</i></span> <b>appetite for war</b>. (<span style="color:#92C47D;">4</span>)`,
-    "5": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">5</span>)`,
-    "6": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">6</span>)`,
-    "7": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">7</span>)`,
-    "8": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">8</span>)`,
-    "9": `The Country <i><span style="color: #92C47D;">craves</i></span> <b>war</b>. (<span style="color:#92C47D;">9</span>)`,
+    "-5": `Our <b>foreign policy</b> is <i><span style="color: #0E6C81;">extremely pro-America</i></span>. (<span style="color:#0E6C81;">-5</span>)`,
+    "-4": `Our <b>foreign policy</b> is <i><span style="color: #0E6C81;">extremely pro-America</i></span>. (<span style="color:#0E6C81;">-4</span>)`,
+    "-3": `Our <b>foreign policy</b> is <i><span style="color: #0E6C81;">pro-America</i></span>. (<span style="color:#0E6C81;">-3</span>)`,
+    "-2": `Our <b>foreign policy</b> is <i><span style="color: #0E6C81;">pro-America</i></span>. (<span style="color:#0E6C81;">-2</span>)`,
+    "-1": `Our <b>foreign policy</b> is <i><span style="color: #ef7625;">slightly pro-America</i></span>. (<span style="color:#ef7625;">-1</span>)`,
+    "0": `Our <b>foreign policy</b> is <i><span style="color: #ef7625;">neutral</i></span>. (<span style="color:#ef7625;">0</span>)`,
+    "1": `Our <b>foreign policy</b> is <i><span style="color: #ef7625;">slightly pro-Europe</i></span>. (<span style="color:#ef7625;">1</span>)`,
+    "2": `Our <b>foreign policy</b> is <i><span style="color: #f05d97;">pro-Europe</i></span>. (<span style="color:#f05d97;">2</span>)`,
+    "3": `Our <b>foreign policy</b> is <i><span style="color: #f05d97;">pro-Europe</i></span>. (<span style="color:#f05d97;">3</span>)`,
+    "4": `Our <b>foreign policy</b> is a <i><span style="color: #f05d97;">extremly pro-Europe</i></span>. (<span style="color:#f05d97;">4</span>)`,
+    "5": `Our <b>foreign policy</b> is <i><span style="color: #f05d97;">extremly pro-Europe</i></span>. (<span style="color:#f05d97;">5</span>)`,
 };
 
 //this is the news section images
 var pictureDict2 = {
-    0: "https://i.imgur.com/6KMHk8z.png",
+    0: "https://files.catbox.moe/393e3y.png",
 };
 
 //this is the popup menu
@@ -6582,7 +6489,7 @@ function openSurrogates() {
             const menuItem = document.createElement('div');
             menuItem.style.display = 'flex';
             menuItem.style.alignItems = 'flex-start';
-            menuItem.style.backgroundImage = 'url("https://i.imgur.com/LGaEu23.png")';
+            menuItem.style.backgroundImage = 'url("https://files.catbox.moe/18mwhs.png")';
             menuItem.style.marginBottom = '1px';
             menuItem.style.width = '438px';
             menuItem.style.height = '90px';
@@ -6600,16 +6507,16 @@ function openSurrogates() {
 
             const name = document.createElement('p');
             name.style.fontSize = "15px"; 
-            name.style.color = "#006699"; 
+            name.style.color = "black"; 
             name.innerHTML = item.name; 
-            name.style.fontFamily = "GDSTransport, sans-serif"; 
+            name.style.fontFamily = "Helvetica, sans-serif"; 
             name.style.textRendering = "optimizeSpeed"; 
             name.style.webkitFontSmoothing = "none"; 
             name.style.mozOsxFontSmoothing = "none"; 
-            name.style.fontWeight = "450"; 
+            name.style.fontWeight = "600"; 
             name.style.position = "absolute";  
-            name.style.marginLeft = "4px";    
-            name.style.marginTop = "5px";    
+            name.style.marginLeft = "-6px";    
+            name.style.marginTop = "6px";    
             textAndButton.appendChild(name);
 
             const text = document.createElement('p');
@@ -6622,7 +6529,7 @@ function openSurrogates() {
             text.style.fontWeight = "450"; 
             text.style.position = "absolute"; 
             text.style.marginLeft = "-7px";    
-            text.style.marginTop = "29px";    
+            text.style.marginTop = "31px";    
 
             textAndButton.appendChild(text);
             menuItem.appendChild(photo);
@@ -6637,12 +6544,12 @@ function openSurrogates() {
         const closeIcon = document.createElement('img');
         closeIcon.id = "closeIcon"; 
 
-        closeIcon.src = "https://i.imgur.com/cThipKS.png";
+        closeIcon.src = "https://files.catbox.moe/ykmra1.png";
         closeIcon.alt = "Close";
 
         closeButton.style.position = "absolute";
-        closeButton.style.top = "-6px";  
-        closeButton.style.right = "-57px";
+        closeButton.style.top = "0px";  
+        closeButton.style.right = "0px";
 
         closeButton.appendChild(closeIcon);
         closeButton.onclick = closeSurrogates;
@@ -6770,12 +6677,102 @@ let observerRunning = false;
 
 
 
+function tunnel(new_q){
+    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
+} 
 
-
-cyoAdventure = function(a) {
-    ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
-    e.noCounter += 1
-        if (e.noCounter == 1) { 
-            campaignTrail_temp.election_json[0].fields.advisor_url = "https://files.catbox.moe/ba93ql.gif";   
+function getTooltips(str) {
+        let matches = [];
+    
+        tooltipList.forEach((tooltip, index) => {
+            // Adjust the regex to match searchString potentially surrounded by “ and followed by optional punctuation
+           let regex = new RegExp(`(?<=\\b|\\s|^|“)${tooltip.searchString}(?=[.,;!?]?\\b|\\s|”|$)`, 'g');
+    
+    
+            let match;
+            while ((match = regex.exec(str)) !== null) {
+                matches.push({
+                    start: match.index + (match[0].startsWith('“') ? 1 : 0), // Adjust for potential starting “
+                    end: match.index + match[0].length - (match[0].endsWith('”') ? 1 : 0) - (match[2] ? 1 : 0), 
+                    tooltipIndex: index
+                });
+            }
+        });
+    
+        // Sort by starting position; if two start at the same position, longer match comes first
+        matches.sort((a, b) => a.start - b.start || b.end - b.start - (a.end - a.start));
+    
+        // Filter out overlaps
+        for (let i = 0; i < matches.length - 1; ) {
+            if (matches[i + 1].start < matches[i].end) {
+                matches.splice(i + 1, 1); // Remove the next match since it overlaps
+            } else {
+                i++; // Move to next match
+            }
+        }
+    
+        return matches;
     }
+    function applyTooltips(str) {
+        const matches = getTooltips(str);
+        let result = '';
+        let lastIndex = 0;
+    
+        matches.forEach(match => {
+            const tooltip = tooltipList[match.tooltipIndex];
+            result += str.slice(lastIndex, match.start);
+            result += `<span class='mytooltip'>${tooltip.searchString}<span class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
+            lastIndex = match.end;
+        });
+    
+        result += str.slice(lastIndex); // Add the remainder of the original string
+        return result;
+    }
+    
+    function applyTooltipsToObject(obj) {
+        for (let key in obj) {
+            if (typeof obj[key] === 'string') {
+                obj[key] = applyTooltips(obj[key]);
+            } else if (typeof obj[key] === 'object') {
+                applyTooltipsToObject(obj[key]); // Recursive call
+            }
+        }
+    }
+    
+    applyTooltipsToObject(campaignTrail_temp.questions_json);
+    applyTooltipsToObject(campaignTrail_temp.answers_json);
+    applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);    
+
+
+campaignTrail_temp.jet_data = [{
+    "nicknames": {
+        "21": "Bernie",
+        "65": "The 1%",
+        "45": "Saboteurs",
+        "55": "Toaster Haters"
+    },
+    "banner_enabled": false,
+    "banner_data": {},
+    "mapping_enabled": false,
+    "mapping_data": {}
 }
+]
+
+function tunnel(new_q){
+    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
+}
+
+var element = document.getElementById('controlElement');
+if (!element) {
+    let singleObserver = new MutationObserver(handleMutations);
+    singleObserver.observe(document.documentElement, { childList: true, subtree: true });
+    var controlElement = document.createElement('div');
+    controlElement.style.display = 'none';
+    controlElement.id = 'controlElement';
+    document.body.appendChild(controlElement);
+}
+
+const gameWindowNode = document.getElementById("game_window");
+const candidateWatcherConfig = { attributes: true, childList: true, subtree: true };
+
+
