@@ -18,10 +18,10 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": 42530,
+        "pk": 42597,
         "fields": {
             "priority": 0,
-            "description": "Your cabinet is still going through the rough motions of passing through the Senate, and you already know there's one more issue waiting for you at the end of this tunnel. Supreme Court nominee Merrick Garland exists as the antithesis to your views on most issues, and he would absolutely defend the catastrophic Citizens United v. FEC decision, something you campaigned against day and night for the last several years. He would also pass through the Senate with 2/3rds support, and leave at least a few Senators more amenable to any legislation you'd put to the floor over the next four years. You know you can only infuriate your supporters or your party. Who do you pick?",
+            "description": "After you decimated the SNP's reign of terror over Scotland on the 4th, their scattered remnants, as pitiful as they are, continue to talk about that bloody two-child cap. Today, they have crossed a line. Flynn introduced a motion to extinguish the policy. \"It's going to put hundreds of thousands of children out of poverty,\" he says, but Reeves and you know that Britain is not in a good place for such drastic moves, that doing this would destroy our economy even more. Unfortunately, some of the wannabe Corbyns still within us decided to ally themselves with the enemy and will support the motion when it comes to a vote. How do you make them know their place?",
             "likelihood": 1
         }
     }
@@ -50,6 +50,30 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 42530,
             "description": "It is clear to all of us that one of the most pressing problems of our time is immigration—illegal immigration. We need to be tough on policing the channel, making sure only those truly in need can come in while keeping the criminals and smugglers out."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42598,
+        "fields": {
+            "question": 42597,
+            "description": "They don't understand what we are doing, how we need to stabilise Britain before doing anything radical. Make sure all of them know the consequences of this. Get them thinking about their whips."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42600,
+        "fields": {
+            "question": 42597,
+            "description": "These thickos think they're gonna survive anything coming to them, but it doesn't matter. We'll do what we must to ensure Flynn never gets that cap off the books, even if it means working with the Tories."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42602,
+        "fields": {
+            "question": 42597,
+            "description": "Look, I don't really enjoy working with that lot, but we need unity. We won't be scrapping the cap—heavens no—but send Angela their way. I want to see them bicker with one of their own."
         }
     }
 ]
@@ -6254,6 +6278,33 @@ campaignTrail_temp.answer_feedback_json = [
             "candidate": 21,
             "answer_feedback": "As Reform and The Sun begin congratulating you on keeping the tough-on-the-border promises you had on the campaign trail, you can help but feel a strong sense of pride; you did it, you won them over. Yet, what is the point of doing so when the Corbyn left continues acting up, when there are elements within our own party that are against this tougher policy? It doesn't matter anymore; you've won over those you needed to win over. As the votes come in, most of Labour votes yes, most of Reform votes no."
         }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42599,
+        "fields": {
+            "answer": 42598,
+            "candidate": 21,
+            "answer_feedback": "One notice here, another there, make sure they never try to do this again. \"Good call,\" says Cooper, \"they're worse than Nigel.\" When the vote comes, none of them are in the Commons; instead, they're all at the BBC to talk about how you're ruling this party like a dictator, how you're destroying the working class and that you should at least listen to anyone else but your yes-men. Their whips are removed immediately, never to be seen again."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42601,
+        "fields": {
+            "answer": 42600,
+            "candidate": 21,
+            "answer_feedback": "Battered and bruised from the massive blow you gave to their ancien régime, the Conservatives cannot do anything but salivate at the thought of getting you on their side, doing their policies for them under a coat of faint red. The meeting with Sunak is everything you wanted, even if it comes at the cost of your integrity, if you ever had one to begin with.\n"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42603,
+        "fields": {
+            "answer": 42602,
+            "candidate": 21,
+            "answer_feedback": "Keep quiet, let them vote and kick them off. When they understand what they did was wrong, then they can come back"
+        }
     }
 ]
 
@@ -6293,6 +6344,8 @@ function updateQuestions(mutationList, observer) {
 
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
+    e.noCounter += 1
+    refreshSurrogates()
 }
 
 const observer = new MutationObserver(onGameWindowChanged);
@@ -6317,6 +6370,12 @@ function updateQuestionBanner() {
 
 // these are the starting candidates
 const menuItemsA = [
+   { photo: 'https://files.catbox.moe/856qbo.png', name: 'Angela Rayner', text: 'Every time someone complains about you not being enough of a leftist, you politely point them to her. She\'s not Corbyn—thank God—but you would never go through one of her policies. Maybe she\'ll need to use her own hands for that.', button: 'Defer', id: 'RAYNER_A'},
+   { photo: 'https://files.catbox.moe/xo6wy5.png', name: 'Rachel Reeves', text: 'The first female Chancellor of the Exchequer, a "modern" supporter of supply-side economics. Like you, she\'s clearly no friend of Corbynism, but she\'s probably the best chance at repairing that £20 Billion Black Hole.', button: 'Defer', id: 'REEVES_A'},
+   { photo: 'https://files.catbox.moe/eyt08g.png', name: 'Yvette Cooper', text: 'What we saw in the last election was without a doubt a loveless landslide for Labour. Reform made sweeping gains across the nation, and what she is doing for our party, and our country, in attempting to contain that scum deserves a good pat on the back.', button: 'Defer', id: 'COOPER_A'},
+   { photo: 'https://files.catbox.moe/77stz5.png', name: 'David Lammy', text: 'He knows what he is doing, you\'re sure. He\'s always known what he was doing. Under Blair, and Gordon. Let\'s just make sure we remember to make him shut up next time Israel shows up on the telly.', button: 'Defer', id: 'LAMMY_A'},
+   { photo: 'https://files.catbox.moe/p09y44.png', name: 'Wes Streeting', text: 'When you walk into work, he\'s always there. Whether it be in human form or in spiritual form. He\'s a little camp, in a good way. He clearly knows a thing or two about the National Health Service. But if he ever takes power, then only God can save Britain.', button: 'Defer', id: 'STREETING_A'},
+   { photo: 'https://files.catbox.moe/z1n3g1.png', name: 'Ed Milliband', text: 'There\'s always a flicker of distrust in his eyes, though whether that\'s at you or at himself, it\'s hard to say. It doesn\'t really matter now, he had his chance and blew it. This is your Labour. You pray he won\'t fumble his energy plan as much as he did 2015.', button: 'Defer', id: 'MCSWEENEY_A'},
    { photo: 'https://files.catbox.moe/t6e39i.png', name: 'Morgan McSweeney', text: 'The architect of Starmerism, the man who brought Labour back from nothing, a slimy bastard. You owe everything to him and he might come back soon to demand payment.', button: 'Defer', id: 'MCSWEENEY_A'}
 ]
 
@@ -6391,6 +6450,9 @@ const ForPolMap = {
 //this is the news section images
 var pictureDict2 = {
     0: "https://files.catbox.moe/393e3y.png",
+    1: "https://files.catbox.moe/o4aqnv.png",
+    2: "https://files.catbox.moe/qfse20.png",
+    3: "https://files.catbox.moe/pbe279.png"
 };
 
 //this is the popup menu
@@ -6499,7 +6561,7 @@ function openSurrogates() {
             textAndButton.appendChild(name);
 
             const text = document.createElement('p');
-            text.style.fontSize = "12px"; 
+            text.style.fontSize = "11px"; 
             text.innerHTML = item.text; 
             text.style.fontFamily = "Helvetica, sans-serif"; 
             text.style.textRendering = "optimizeSpeed"; 
@@ -6654,6 +6716,18 @@ async function handleMutations(mutationsList, observer) {
 let processedNodes = new Set();
 let observerRunning = false;
 
+var element = document.getElementById('controlElement');
+if (!element) {
+    let singleObserver = new MutationObserver(handleMutations);
+    singleObserver.observe(document.documentElement, { childList: true, subtree: true });
+    var controlElement = document.createElement('div');
+    controlElement.style.display = 'none';
+    controlElement.id = 'controlElement';
+    document.body.appendChild(controlElement);
+}
+
+const gameWindowNode = document.getElementById("game_window");
+const candidateWatcherConfig = { attributes: true, childList: true, subtree: true };
 
 
 function tunnel(new_q){
@@ -6726,9 +6800,9 @@ function getTooltips(str) {
 campaignTrail_temp.jet_data = [{
     "nicknames": {
         "21": "Bernie",
-        "65": "The 1%",
-        "45": "Saboteurs",
-        "55": "Toaster Haters"
+        "65": "Tories",
+        "45": "Useful Idiots",
+        "55": "Reform"
     },
     "banner_enabled": false,
     "banner_data": {},
@@ -6751,7 +6825,44 @@ if (!element) {
     document.body.appendChild(controlElement);
 }
 
-const gameWindowNode = document.getElementById("game_window");
-const candidateWatcherConfig = { attributes: true, childList: true, subtree: true };
 
 
+function changechart() {
+    if (document.getElementById("overall_result") != null) {
+        var overallthing = document.getElementById("overall_result").innerHTML;
+        if (!overallthing.includes('class="tooltip"')) {
+            //LABOUR
+            overallthing = overallthing.replace("Starmer", "<span class='tooltip-container'>Starmer<span class='tooltip'><img src=https://i.imgur.com/6mG2ozD.png><br><p style=\"font-size: 13px; margin: 2px 0;\">Prime Minister</p><p style=\"font-size: 15px; margin: 2px 0;\">Keir Starmer</p><span style=\"font-size: 12px; margin: 2px 0;\">They elected you not as saviour nor saint, but janitor. You should prove your worth.</span></span></span>");
+            //REFORM
+            overallthing = overallthing.replace("Reform", "<span class='tooltip-container'>Reform<span class='tooltip'><img src=https://i.imgur.com/ZuiFFLV.png><br><p style=\"font-size: 13px; margin: 2px 0;\">Unofficial Opposition</p><p style=\"font-size: 15px; margin: 2px 0;\">Reform UK</p><span style=\"font-size: 12px; margin: 2px 0;\">Nigel's creation of pure sin and scorn. The devil's party. You can't help but see yourself in them.</span></span></span>");
+            //TORIES
+            overallthing = overallthing.replace("Tories", "<span class='tooltip-container'>Tories<span class='tooltip'><img src=https://i.imgur.com/KkGy0qt.png><br><p style=\"font-size: 13px; margin: 2px 0;\">Official Opposition</p><p style=\"font-size: 15px; margin: 2px 0;\">The Tories</p><span style=\"font-size: 12px; margin: 2px 0;\">For fourteen years they've ruined this nation, and if you don't fix it quick enough, they'll ruin it for fourteen more.</span></span></span>");
+            //OTHERS
+            overallthing = overallthing.replace("Useful Idiots", "<span class='tooltip-container'>Irrelevant<span class='tooltip'><img src=https://i.imgur.com/UpfMQrV.png><br><p style=\"font-size: 13px; margin: 2px 0;\">Backbenchers</p><p style=\"font-size: 15px; margin: 2px 0;\">Irrelevant Parties</p><span style=\"font-size: 12px; margin: 2px 0;\">They made great gains on the fourth, but not enough to dethrone you. They're so small from up here.</span></span></span>");
+
+            document.getElementById("overall_result").innerHTML = overallthing;
+            initializeTooltips();
+        }
+    }
+}
+
+function initializeTooltips() {
+    var tooltipContainers = document.querySelectorAll('.tooltip-container');
+    tooltipContainers.forEach(function(container) {
+        var tooltip = container.querySelector('.tooltip');
+        container.addEventListener('mouseover', function(event) {
+            if (event.target === container) {
+                tooltip.style.visibility = 'visible';  // Make it visible
+                tooltip.style.opacity = '1';
+            }
+        });
+        container.addEventListener('mouseout', function(event) {
+            if (event.target === container) {
+                tooltip.style.visibility = 'hidden';  // Hide it
+                tooltip.style.opacity = '0';
+            }
+        });
+    });
+}
+
+window.setInterval(changechart, 200);

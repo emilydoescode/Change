@@ -94,7 +94,7 @@ campaignTrail_temp.candidate_json = [
             "party": "Labour",
             "state": "Holborn and St Pancras",
             "priority": 1,
-            "description": "<p>Keir Starmer is, by all means, a nobody. His politics are as bland as possible, his ideals seem to be whatever will give him power, his promises are all a ruse, and him? He is the face of no movement, no charisma, and no charm, but he won, and he won big. Keir was the solution, the man who would rid the nation of Corbyn’s spirit of failure and got the machine up and running again. <br><br>Even then, Keir persists. He reminds himself of Blair and Major, of how the former inherited a disaster from the latter, only to turn Britain around and make it shine on the global stage once again. But he always remembers that he is not Blair. Blair had some stability; Blair had the EU. He has neither. Alas, this toolmaker's son must figure out a way to fix this broken mess, or be forgotten to the whims of history. He just needs to change.</p>",
+            "description": "<p>Keir Starmer is, by all means, a nobody. His politics are as bland as possible, his ideals seem to be whatever will give him power, his promises are all a ruse, and him? He is the face of no movement, no charisma, and no charm, but he won, and he won big. Keir was the solution, the man who would rid the nation of Corbyn’s spirit of failure and got the machine up and running again. <br><br>Even then, Keir persists. He reminds himself of Blair and Major, of how the former inherited a disaster from the latter, only to turn Britain around and make it shine on the global stage once again. But he always remembers that he is not Blair. Blair had some stability; Blair had the EU. He has neither. Alas, this toolmaker's son must figure out a way to fix this broken mess, or be forgotten to the whims of history. He just needs to <span style=\"color: #e4003b;\"><b>change.</b></span></p>",
             "color_hex": "#3c3cb5",
             "secondary_color_hex": null,
             "is_active": 1,
@@ -112,10 +112,10 @@ campaignTrail_temp.candidate_json = [
         "pk": 45,
         "fields": {
             "first_name": "Mrs",
-            "last_name": "Toaster Hater",
+            "last_name": "Useful Idiots",
             "election": 9,
-            "party": "Libertarian",
-            "state": "South Carolina",
+            "party": "Liberal Democrats",
+            "state": "Hell",
             "priority": 3,
             "description": "'",
             "color_hex": "#c9b34c",
@@ -135,10 +135,10 @@ campaignTrail_temp.candidate_json = [
         "pk": 55,
         "fields": {
             "first_name": "Mr",
-            "last_name": "Saboteurs",
+            "last_name": "Reform",
             "election": 9,
-            "party": "Green",
-            "state": "New York",
+            "party": "Reform UK",
+            "state": "Bingle",
             "priority": 4,
             "description": "'",
             "color_hex": "#27772e",
@@ -157,10 +157,10 @@ campaignTrail_temp.candidate_json = [
         "model": "campaign_trail.candidate",
         "pk": 65,
         "fields": {
-            "first_name": "Mrs",
-            "last_name": "The 1%",
+            "first_name": "Mr",
+            "last_name": "Tories",
             "election": 9,
-            "party": "Republican",
+            "party": "Conservative",
             "state": "California",
             "priority": 5,
             "description": "'",
@@ -477,9 +477,25 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
       "https://files.catbox.moe/rqvfwi.mp3"
     );
 
+    const song4 = new Song(
+      "Victim",
+      "Tom Rowlands",
+      "https://files.catbox.moe/8xqmjr.png",
+      "https://files.catbox.moe/d9si5o.mp3"
+    );
+
+    const song5 = new Song(
+      "Merry Christmas Maggie Thatcher",
+      "Billy Elliot: the Musical",
+      "https://files.catbox.moe/fmij7z.png",
+      "https://files.catbox.moe/t58ju1.mp3"
+    );
+
     playlist.addSong(song1);
     playlist.addSong(song2);
     playlist.addSong(song3);
+    playlist.addSong(song4);
+    playlist.addSong(song5);
 
   
     const playerContainer = document.createElement("div");
@@ -673,6 +689,34 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
   
   const style = document.createElement("style");
   style.textContent = `
+
+  .tooltip {
+          position: absolute; 
+          visibility: hidden; 
+          opacity: 0;
+          transition: opacity 0.3s ease, visibility 0s 0.3s; 
+          pointer-events: none; 
+      }
+
+  .tooltip-container:hover .tooltip {
+      pointer-events: auto; 
+      transition-delay: 0s; 
+      background-color: #201F1A;
+      background-Image: url("https://i.imgur.com/5awyYVS.png");
+      background-size: cover; 
+      font-family: Arial, sans-serif !important;
+      font-style: normal !important;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left; 
+      line-height: 1.2; 
+  }
+
+  .tooltip img {
+      display: block; 
+      margin: 0 auto -13px;
+      // border: 1px solid #C9C9C9;
+  }
+
   #player {
       border: 3px solid #C9C9C9; /* Add your desired border style */
       display: flex;
@@ -778,6 +822,33 @@ setupMusicPlayer();
 
   function addDynamicCSS() {
     var css = `
+
+        .tooltip-container {
+           opacity: 1;
+           transition-delay: 0.5s;
+           border-bottom: 1px dotted blue; 
+         }
+         
+         .tooltip {
+             position: absolute;
+             background-color: #333;
+             color: #fff;
+             padding: 8px;
+             border-radius: 6px;
+             opacity: 0;
+             transition: opacity 0.3s;
+             z-index: 1;
+             max-width: 200px; 
+             text-align: center; 
+             left: 61%; 
+             top: 4%; 
+             transform: translate(-50px, 0px); 
+         }
+         
+         .tooltip img {
+             max-width: 50%; 
+         }
+
         .inner_window_question {
             height: auto;
         }
@@ -886,59 +957,50 @@ setupMusicPlayer();
       {searchString: "Blair", explanationText: "<img src=https://files.catbox.moe/9gvckm.png><br>Made us win, then made us lose."},
       {searchString: "Corbyn", explanationText: "<img src=https://files.catbox.moe/2tdtsh.png><br><b><i>Bastard</i></b>."},
       {searchString: "Thatcher", explanationText: "<img src=https://files.catbox.moe/44bzzu.png><br>Brought us meaningful change."},
+      {searchString: "Reeves", explanationText: "<img src=https://files.catbox.moe/6arxhb.png><br>Chancellor of the Exchequer, a silent machine."},
 
+      //Q2
+      {searchString: "SNP's reign of terror", explanationText: "<img src=https://files.catbox.moe/f92nng.png><br>Thank god for the Scotland Act."},
+      {searchString: "Sunak", explanationText: "<img src=https://files.catbox.moe/lfigw1.png><br>Our saviour."},
     ];
 
 campaignTrail_temp.achievements = {
   
-  "Mar-a-Lawful" : {
-  "image" : "https://files.catbox.moe/bconuu.png",
-  "description" : "Banish Satan",
+  "Good Keir" : {
+  "image" : "https://files.catbox.moe/rnbuew.png",
+  "description" : "Win without caving to Nigel",
   "cannotBeCheated" : true
   },
 
-  "Regime Unchanged" : {
-  "image" : "https://files.catbox.moe/zgz0ui.png",
-  "description" : "Fly with an olive branch",
-  "cannotBeCheated" : true
-  },
-  
-  "Can't-Cun" : {
-  "image" : "https://files.catbox.moe/1ccfro.png",
-  "description" : "Avenge the victims",
-  "cannotBeCheated" : true
-  },
-  
-  "Outfoxed" : {
-  "image" : "https://files.catbox.moe/78bu1b.png",
-  "description" : "It won't happen here",
-  "cannotBeCheated" : true
-  },
-  
-  "Gifted Hands, Giftless Mind" : {
-  "image" : "https://files.catbox.moe/ilsfkr.png",
-  "description" : "Stop a surgery",
-  "cannotBeCheated" : true
-  },
-  
-  "White Texas" : {
-  "image" : "https://files.catbox.moe/m4viq8.png",
-  "description" : "Freeze an attorney",
+  "Bad Keir" : {
+  "image" : "https://files.catbox.moe/vwje6e.png",
+  "description" : "Become one with Reform",
   "cannotBeCheated" : true
   },
 
-  "Kansas City Shuffle" : {
-  "image" : "https://files.catbox.moe/hw7awy.png",
-  "description" : "Destroy a flopulist",
+  "Lovable Landslide" : {
+  "image" : "https://files.catbox.moe/m85hf1.png",
+  "description" : "Get 450 seats",
   "cannotBeCheated" : true
   },
 
-  "The Last Gipper" : {
-  "image" : "https://files.catbox.moe/kyzxbk.png",
-  "description" : "Make Carter proud",
+  "Loveless Loss" : {
+  "image" : "https://files.catbox.moe/aqk6nq.png",
+  "description" : "Sink",
   "cannotBeCheated" : true
   },
 
+  "Pretty Little Dead Keirs" : {
+  "image" : "https://files.catbox.moe/g0v8kf.png",
+  "description" : "Get changed",
+  "cannotBeCheated" : true
+  },
+
+  "TERF Island" : {
+  "image" : "https://files.catbox.moe/u64tj5.png",
+  "description" : "Fuflil J.K. Rowling's dream",
+  "cannotBeCheated" : true
+  },
 
 }
 
