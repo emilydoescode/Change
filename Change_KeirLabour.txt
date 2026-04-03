@@ -65743,7 +65743,6 @@ cyoAdventure = function(a) {
     e.noCounter += 1
     refreshSurrogates()
 
-
 }
 
 const observer = new MutationObserver(onGameWindowChanged);
