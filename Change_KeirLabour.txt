@@ -75,6 +75,14 @@ campaignTrail_temp.answers_json = [
             "question": 42597,
             "description": "Look, I don't really enjoy working with that lot, but we need unity. We won't be scrapping the cap—heavens no—but send Angela their way. I want to see them bicker with one of their own."
         }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42604,
+        "fields": {
+            "question": 42597,
+            "description": "Keep quiet, let them vote and kick them off. When they understand what they did was wrong, then they can come back"
+        }
     }
 ]
 
@@ -6303,10 +6311,21 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 42602,
             "candidate": 21,
-            "answer_feedback": "Keep quiet, let them vote and kick them off. When they understand what they did was wrong, then they can come back"
+            "answer_feedback": "aaaa"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42605,
+        "fields": {
+            "answer": 42604,
+            "candidate": 21,
+            "answer_feedback": "put feedback here, don't forget to change candidate"
         }
     }
 ]
+
+
 
 e = campaignTrail_temp
 
@@ -6315,6 +6334,8 @@ var Wins = 0;
 var Pop = 0;
 var Econ = 0;
 var ForPol = 0;
+var Starmerreich = 0;
+var PolPos = 0;
 e.noCounter = 0
 
 
@@ -6346,6 +6367,8 @@ cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
     e.noCounter += 1
     refreshSurrogates()
+
+
 }
 
 const observer = new MutationObserver(onGameWindowChanged);
@@ -6385,19 +6408,47 @@ let savedY = null;
 
 //this creates the variable maps, change it according to you needs
 
+const PolPosMap = {
+    "-5": `Labour is <b>perceived</b> as <i><span style="color: #0E6C81;">a Reform psy-op</i></span>. (<span style="color:#0E6C81;">-5</span>)`,
+    "-4": `Labour is <b>perceived</b> as <i><span style="color: #0E6C81;">a Reform psy-op</i></span>. (<span style="color:#0E6C81;">-4</span>)`,
+    "-3": `Labour is <b>perceived</b> as <i><span style="color: #0E6C81;">red Tories</i></span>. (<span style="color:#0E6C81;">-3</span>)`,
+    "-2": `Labour is <b>perceived</b> as <i><span style="color: #0E6C81;">red Tories</i></span>. (<span style="color:#0E6C81;">-2</span>)`,
+    "-1": `Labour is <b>perceived</b> as <i><span style="color: #ef7625;">center-right</i></span>. (<span style="color:#ef7625;">-1</span>)`,
+    "0": `Labour is <b>perceived</b> as <i><span style="color: #ef7625;">centrist</i></span>. (<span style="color:#ef7625;">0</span>)`,
+    "1": `Labour is <b>perceived</b> as <i><span style="color: #ef7625;">center-left</i></span>. (<span style="color:#ef7625;">1</span>)`,
+    "2": `Labour is <b>perceived</b> as <i><span style="color: #e4003b;">Corbynites</i></span>. (<span style="color:#f05d97;">2</span>)`,
+    "3": `Labour is <b>perceived</b> as <i><span style="color: #e4003b;">Corbynites</i></span>. (<span style="color:#f05d97;">3</span>)`,
+    "4": `Labour is <b>perceived</b> as a <i><span style="color: #e4003b;">to the left of Stalin</i></span>. (<span style="color:#f05d97;">4</span>)`,
+    "5": `Labour is <b>perceived</b> as <i><span style="color: #e4003b;">to the left of Stalin</i></span>. (<span style="color:#f05d97;">5</span>)`,
+};
+
+const StarmerreichMap = {
+    "-3": `The <b>party</b> is <i><span style="color: #e4003b;">ready to oust you</i></span> (<span style="color:#e4003b;">-3</span>)`,
+    "-2": `The <b>party</b> is <i><span style="color: #e4003b;">angry</i></span> (<span style="color:#e4003b;">-2</span>)`,
+    "-1": `The <b>party</b> is <i><span style="color: #e4003b;">angry</i></span> (<span style="color:#e4003b;">-1</span>)`,
+    "0": `The <b>party</b> is <i><span style="color: #e4003b;">divided</i></span> (<span style="color:#e4003b;">0</span>)`,
+    "1": `The <b>party</b> is <i><span style="color: #e4003b;">divided</i></span> (<span style="color:#e4003b;">1</span>)`,
+    "2": `The <b>party</b> is <i><span style="color: #ef7625;">controlled</i></span> (<span style="color:#ef7625;">2</span>)`,
+    "3": `The <b>party</b> is <i><span style="color: #ef7625;">controlled</i></span> (<span style="color:#ef7625;">3</span>)`,
+    "4": `The <b>party</b> is <i><span style="color: #ef7625;">controlled</i></span> (<span style="color:#ef7625;">4</span>)`,
+    "5": `The <b>party</b> is <i><span style="color: #106936;">obedient</i></span> (<span style="color:#106936;">5</span>)`,
+    "6": `The <b>party</b> is <i><span style="color: #106936;">obedient</i></span> (<span style="color:#106936;">6</span>)`,
+    "7": `The <b>party</b> is <i><span style="color: #106936;">obedient</i></span> (<span style="color:#106936;">7</span>)`,
+}
+
 const WinsMap = {
     "-2": `The Keir Ministry has <i><span style="color: #e4003b;">bugger-all</i></span> <b>wins</b>. (<span style="color:#e4003b;">-2</span>)`,
     "-1": `The Keir Ministry has <i><span style="color: #e4003b;">bugger-all</i></span> <b>wins</b>. (<span style="color:#e4003b;">-1</span>)`,
     "0": `The Keir Ministry has <i><span style="color: #e4003b;">bugger-all</i></span> <b>wins</b>. (<span style="color:#e4003b;">0</span>)`,
-    "1": `The Keir Ministry has <i><span style="color: #e4003b;">few</i></span> <b>wins</b>. (<span style="color:#e4003b;">1</span>)`,
-    "2": `The Keir Ministry has <i><span style="color: #e4003b;">few</i></span> <b>wins</b>. (<span style="color:#e4003b;">2</span>)`,
-    "3": `The Keir Ministry has <i><span style="color: #ef7625;">notable</i></span> <b>wins</b>. (<span style="color:#ef7625;">3</span>)`,
-    "4": `The Keir Ministry has <i><span style="color: #ef7625;">notable</i></span> <b>wins</b>. (<span style="color:#ef7625;">4</span>)`,
-    "5": `The Keir Ministry has <i><span style="color: #106936;">tons</i></span> of <b>wins</b>. (<span style="color:#106936;">5</span>)`,
-    "6": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">6</span>)`,
-    "7": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">7</span>)`,
-    "8": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">8</span>)`,
-    "9": `The Keir Ministry has <i><span style="color: #106936;">a brazilian</i></span> <b>wins</b>. (<span style="color:#106936;">9</span>)`,
+    "1": `The Keir Ministry has <i><span style="color: #e4003b;">a</i></span> <b>wins</b>. (<span style="color:#e4003b;">1</span>)`,
+    "2": `The Keir Ministry has <i><span style="color: #e4003b;">wee</i></span> <b>wins</b>. (<span style="color:#e4003b;">2</span>)`,
+    "3": `The Keir Ministry has <i><span style="color: #ef7625;">wee</i></span> <b>wins</b>. (<span style="color:#ef7625;">3</span>)`,
+    "4": `The Keir Ministry has <i><span style="color: #ef7625;">decent</i></span> <b>wins</b>. (<span style="color:#ef7625;">4</span>)`,
+    "5": `The Keir Ministry has <i><span style="color: #106936;">decent</i></span> <b>wins</b>. (<span style="color:#106936;">5</span>)`,
+    "6": `The Keir Ministry has <i><span style="color: #106936;">oodles</i></span> of <b>wins</b>. (<span style="color:#106936;">6</span>)`,
+    "7": `The Keir Ministry has <i><span style="color: #106936;">oodles</i></span> of <b>wins</b>. (<span style="color:#106936;">7</span>)`,
+    "8": `The Keir Ministry has <i><span style="color: #106936;">oodles</i></span> of <b>wins</b>. (<span style="color:#106936;">8</span>)`,
+    "9": `The Keir Ministry has <i><span style="color: #106936;">oodles</i></span> of <b>wins</b>. (<span style="color:#106936;">9</span>)`,
 };
 const PopMap = {
     "-5": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-5</span>)`,
@@ -6407,14 +6458,14 @@ const PopMap = {
     "-1": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">-1</span>)`,
     "0": `Keir has <i><span style="color: #e4003b;">dodgy</i></span> <b>popularity</b>. (<span style="color:#e4003b;">0</span>)`,
     "1": `Keir has <i><span style="color: #ef7625;">weak</i></span> <b>popularity</b>. (<span style="color:#ef7625;">1</span>)`,
-    "2": `Keir has <i><span style="color: #ef7625;">tolerable</i></span> <b>popularity</b>. (<span style="color:#ef7625;">2</span>)`,
-    "3": `Keir has <i><span style="color: #106936;">strong</i></span> <b>popularity</b>. (<span style="color:#106936;">3</span>)`,
+    "2": `Keir has <i><span style="color: #ef7625;">passable</i></span> <b>popularity</b>. (<span style="color:#ef7625;">2</span>)`,
+    "3": `Keir has <i><span style="color: #106936;">passable</i></span> <b>popularity</b>. (<span style="color:#106936;">3</span>)`,
     "4": `Keir has <i><span style="color: #106936;">strong</i></span> <b>popularity</b>. (<span style="color:#106936;">4</span>)`,
-    "5": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">5</span>)`,
-    "6": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">6</span>)`,
-    "7": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">7</span>)`,
-    "8": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">8</span>)`,
-    "9": `Keir has <i><span style="color: #106936;">a brazilian</i></span> <b>popularity</b>. (<span style="color:#106936;">9</span>)`,
+    "5": `Keir has <i><span style="color: #106936;">mint</i></span> <b>popularity</b>. (<span style="color:#106936;">5</span>)`,
+    "6": `Keir has <i><span style="color: #106936;">mint</i></span> <b>popularity</b>. (<span style="color:#106936;">6</span>)`,
+    "7": `Keir has <i><span style="color: #106936;">mint</i></span> <b>popularity</b>. (<span style="color:#106936;">7</span>)`,
+    "8": `Keir has <i><span style="color: #106936;">mint</i></span> <b>popularity</b>. (<span style="color:#106936;">8</span>)`,
+    "9": `Keir has <i><span style="color: #106936;">mint</i></span> <b>popularity</b>. (<span style="color:#106936;">9</span>)`,
 };
 const EconMap = {
     "-5": `The <b>economy</b> has <i><span style="color: #e4003b;">collpased</i></span>. (<span style="color:#e4003b;">-5</span>)`,
@@ -6496,11 +6547,15 @@ function openSurrogates() {
         popText = `${PopMap[String(Pop)]}`;
         econText = `${EconMap[String(Econ)]}`;
         forpolText = `${ForPolMap[String(ForPol)]}`;
+        reichText = `${StarmerreichMap[String(Starmerreich)]}`;
+        polposText = `${PolPosMap[String(PolPos)]}`;
         overviewtxt += "• "+ `${winsText}` + "<br>";
         overviewtxt += "• "+ `${popText}` + "<br>";
         overviewtxt += "• "+ `${econText}` + "<br>";
         overviewtxt += "• "+ `${forpolText}` + "<br>";
-        if(e.player_answers.includes(42515)){
+        overviewtxt += "• "+ `${reichText}` + "<br>";
+        overviewtxt += "• "+ `${polposText}` + "<br>";
+        if(e.player_answers.includes(1882)){
             overviewtxt += "• "+  `Tax Relief <i><span style="color: #92C47D;">has been delivered</i></span>.` + "<br>";
         }
 

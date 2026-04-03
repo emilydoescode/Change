@@ -194,7 +194,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
-            "description_as_running_mate": "<p>If you ask the tabloids of Britain, Angela Rayner is a disgusting creature from the sewers who pretends to be pretty to earn votes. If you ask the average Labour voter, you might get a more sympathetic response, they might call her an Intelligent former trade unionist, or maybe they might say she's the left-ish weight that Keir needed. But if you ask Angela, she's just someone doing her job. <br><br>In a land where the rights of minorities are being eroded every day by both parties, Angela stands, although we do not know how firm, against it. Britain does not know if she will ever need to become Prime Minister. If she wishes to, however, is another story.</p>",
+            "description_as_running_mate": "<p>If you ask the tabloids of Britain, Angela Rayner is a disgusting creature from the sewers who pretends to be pretty to earn votes. If you ask the average Labour voter, you might get a more sympathetic response, they might call her an intelligent former trade unionist, or maybe they might say she's the left-ish weight that Keir needed. But if you ask Angela, she's just someone doing her job. <br><br>In a land where the rights of minorities are being eroded every day by both parties, Angela stands, although we do not know how firm, against it. Britain does not know if she will ever need to become Prime Minister. If she wishes to, however, is another story.</p>",
             "candidate_score": 1,
             "running_mate": true
         }
@@ -357,7 +357,6 @@ document.body.background = "https://files.catbox.moe/tm058t.png";
 
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#e4003b!important;}</style>";
 
-//#endcode
 
  RecReading=true
     
@@ -519,11 +518,12 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
   
   const titleElement = document.createElement("h3");
   titleElement.id = "title";
-  titleElement.style.fontWeight = 'normal'; // Make it normal as per previous request
+  titleElement.style.fontWeight = 'bold'; // Make it normal as per previous request
   songInfo.appendChild(titleElement);
   
   const artistElement = document.createElement("p");
   artistElement.id = "artist";
+  artistElement.style.fontStyle = 'italic';
   songInfo.appendChild(artistElement);
   
   infoContainer.appendChild(songInfo);
@@ -539,19 +539,19 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
   
   const prevButton = document.createElement("img");
   prevButton.id = "prevButton";
-  prevButton.src = "https://i.imgur.com/CXlCRB3.png";
+  prevButton.src = "https://files.catbox.moe/uxgpza.png";
   prevButton.alt = "Previous";
   controls.appendChild(prevButton);
   
   const playPauseButton = document.createElement("img");
   playPauseButton.id = "playPauseButton";
-  playPauseButton.src = "https://i.imgur.com/DmFZwzX.png"; // Set the default play image
+  playPauseButton.src = "https://files.catbox.moe/mc2jmy.png"; // Set the default play image
   playPauseButton.alt = "Play/Pause";
   controls.appendChild(playPauseButton);
   
   const nextButton = document.createElement("img");
   nextButton.id = "nextButton";
-  nextButton.src = "https://i.imgur.com/yNEtsMl.png";
+  nextButton.src = "https://files.catbox.moe/kqjz7g.png";
   nextButton.alt = "Next";
   controls.appendChild(nextButton);
   
@@ -561,10 +561,10 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
     const audio = document.getElementById("audio");
     if (audio.paused) {
       audio.play();
-      playPauseButton.src = "https://i.imgur.com/DmFZwzX.png"; // Set the pause image
+      playPauseButton.src = "https://files.catbox.moe/mc2jmy.png"; // Set the pause image
     } else {
       audio.pause();
-      playPauseButton.src = "https://i.imgur.com/QFh1MEA.png"; // Set the play image
+      playPauseButton.src = "https://files.catbox.moe/hbf91c.png"; // Set the play image
     }
   });
   
@@ -602,7 +602,7 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
     volumeContainer.id = "volume-container";
   
   const volumeLabel = document.createElement("img");
-  volumeLabel.src = "https://files.catbox.moe/384n87.png";
+  volumeLabel.src = "https://files.catbox.moe/pq3hdf.png";
   volumeLabel.alt = "Volume";
   volumeContainer.appendChild(volumeLabel);
   
@@ -874,11 +874,7 @@ setupMusicPlayer();
             height: 150px;
         }
 
-        @font-face {
-          font-family: GDSTransport; /* set name */
-          src: url("https://files.catbox.moe/0vzdk6.woff"); /* url of the font */
-        }
-        
+
         #election_summary {
             padding-top: 0em;
             padding-right: 1em;
@@ -958,49 +954,139 @@ setupMusicPlayer();
       {searchString: "Corbyn", explanationText: "<img src=https://files.catbox.moe/2tdtsh.png><br><b><i>Bastard</i></b>."},
       {searchString: "Thatcher", explanationText: "<img src=https://files.catbox.moe/44bzzu.png><br>Brought us meaningful change."},
       {searchString: "Reeves", explanationText: "<img src=https://files.catbox.moe/6arxhb.png><br>Chancellor of the Exchequer, a silent machine."},
+      {searchString: "The Sun", explanationText: "<img src=https://files.catbox.moe/v3igm6.png><br>Will never be happy."},
 
       //Q2
-      {searchString: "SNP's reign of terror", explanationText: "<img src=https://files.catbox.moe/f92nng.png><br>Thank god for the Scotland Act."},
+      {searchString: "SNP's reign of terror", explanationText: "<img src=https://files.catbox.moe/f92nng.png><br>Thank god for Section 35."},
       {searchString: "Sunak", explanationText: "<img src=https://files.catbox.moe/lfigw1.png><br>Our saviour."},
     ];
 
 campaignTrail_temp.achievements = {
   
   "Good Keir" : {
-  "image" : "https://files.catbox.moe/rnbuew.png",
+  "image" : "https://files.catbox.moe/az60h7.png",
   "description" : "Win without caving to Nigel",
   "cannotBeCheated" : true
   },
 
   "Bad Keir" : {
-  "image" : "https://files.catbox.moe/vwje6e.png",
+  "image" : "https://files.catbox.moe/dynwjj.png",
   "description" : "Become one with Reform",
   "cannotBeCheated" : true
   },
 
   "Lovable Landslide" : {
-  "image" : "https://files.catbox.moe/m85hf1.png",
+  "image" : "https://files.catbox.moe/fejcpc.png",
   "description" : "Get 450 seats",
   "cannotBeCheated" : true
   },
 
   "Loveless Loss" : {
-  "image" : "https://files.catbox.moe/aqk6nq.png",
+  "image" : "https://files.catbox.moe/kmaqn4.png",
   "description" : "Sink",
   "cannotBeCheated" : true
   },
 
   "Pretty Little Dead Keirs" : {
-  "image" : "https://files.catbox.moe/g0v8kf.png",
+  "image" : "https://files.catbox.moe/gqhdcn.png",
   "description" : "Get changed",
   "cannotBeCheated" : true
   },
 
   "TERF Island" : {
-  "image" : "https://files.catbox.moe/u64tj5.png",
+  "image" : "https://files.catbox.moe/1mjr8f.png",
   "description" : "Fuflil J.K. Rowling's dream",
   "cannotBeCheated" : true
   },
 
+  "The King In Red" : {
+  "image" : "https://files.catbox.moe/pi2vtf.png",
+  "description" : "Eliminate Reform",
+  "cannotBeCheated" : true
+  },
+
+  "Starmerreich" : {
+  "image" : "https://files.catbox.moe/jxj9fc.png",
+  "description" : "Remake Labour in your image",
+  "cannotBeCheated" : true
+  },
+
+  "Keir the Eighth" : {
+  "image" : "https://files.catbox.moe/xqn6py.png",
+  "description" : "Reform the systems",
+  "cannotBeCheated" : true
+  },
+
+  "Bloody Hell" : {
+    "image" : "https://files.catbox.moe/ba5u9a.png",
+    "description" : "Join Trump in Iran",
+    "cannotBeCheated" : true
+  },
+
+  "Putin, Putout" : {
+    "image" : "https://files.catbox.moe/s67qis.png",
+    "description" : "Keep Ukraine alive",
+    "cannotBeCheated" : true
+  },
+
+  "Hasta la Vista, Bibi" : {
+    "image" : "https://files.catbox.moe/te84xv.png",
+    "description" : "Recognize Palestine",
+    "cannotBeCheated" : true
+  },
+
+  "Despite Everything, It's Still You" : {
+    "image" : "https://files.catbox.moe/e9say6.png",
+    "description" : "Win without sacrificing your principles",
+    "cannotBeCheated" : true
+  },
+
+  "Rachel Leaves" : {
+    "image" : "https://files.catbox.moe/7yk9hs.png",
+    "description" : "Have Reeves leave over the budget",
+    "cannotBeCheated" : true
+  },
+
+  "New New Labour" : {
+    "image" : "https://files.catbox.moe/rw9htm.png",
+    "description" : "Reshuffle your cabinet",
+    "cannotBeCheated" : true
+  },
+
+  "The Queen's Gambit" : {
+    "image" : "https://files.catbox.moe/zhyrp3.png",
+    "description" : "Win as Rayner",
+    "cannotBeCheated" : true
+  },
+
+  "Delayed Victory" : {
+    "image" : "https://files.catbox.moe/jp4010.png",
+    "description" : "Win as Long-Bailey",
+    "cannotBeCheated" : true
+  },
+
+  "Faustian Bargain" : {
+    "image" : "https://files.catbox.moe/cwybpx.png",
+    "description" : "Win as Streeting",
+    "cannotBeCheated" : true
+  },
+
+  "Can't Delay the Inevitable" : {
+    "image" : "https://files.catbox.moe/rnamru.png",
+    "description" : "Win as Burnham",
+    "cannotBeCheated" : true
+  },
+
+  "Apology of Miliband" : {
+    "image" : "https://files.catbox.moe/3atr7r.png",
+    "description" : "Win as Miliband",
+    "cannotBeCheated" : true
+  },
+
+  "He Has Risen" : {
+    "image" : "https://files.catbox.moe/i3gikx.png",
+    "description" : "Win as Corbyn",
+    "cannotBeCheated" : true
+  },
 }
 
